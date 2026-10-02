@@ -994,10 +994,16 @@
         "Test forbidden network/filesystem requests, infinite execution, excessive output and stale run responses."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "9e7a0efea19b3c2ff194d2aa2046181ab921c683",
+        "b8654b6530c3cea57c354515af748d64c22bbee7"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-2",
+      "pull_request": "https://github.com/interactive-project/code/pull/6",
+      "compatibility": "decisions/code-execution-v1.md"
     },
     {
       "order": 22,
