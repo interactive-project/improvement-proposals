@@ -1163,10 +1163,15 @@
         "Provide semantic fixtures for a teaching board with text, formulas, diagrams and a nested quiz."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "4fdef89220e604b1bac6406a2ce429eb2808203a"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-1",
+      "pull_request": "https://github.com/interactive-project/whiteboard/pull/5",
+      "compatibility": "decisions/whiteboard-document-v1.md"
     },
     {
       "order": 25,
