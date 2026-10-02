@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/core/issues/3"
+    "resume_from": "https://github.com/interactive-project/core/issues/4"
   },
   "issues": [
     {
@@ -585,16 +585,38 @@
         "Test out-of-order code runs, evaluation cancellation and failure of an optional driver."
       ],
       "planned_branch": "codex/issue-3",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "1575c8d4859722959311061a8b11a6d5628feeb5",
         "46dba9a0ce8f8c50b6492b9cd434959570312094",
         "e927861ec4ae28f84c8fee87768b732e3ae9126c"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "e927861ec4ae28f84c8fee87768b732e3ae9126c",
+          "url": "https://github.com/interactive-project/core/actions/runs/37000697310",
+          "checks": [
+            "Core conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "e927861ec4ae28f84c8fee87768b732e3ae9126c",
+          "url": "https://github.com/interactive-project/core/actions/runs/37000691112",
+          "checks": [
+            "Core conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-3",
-      "pull_request": "https://github.com/interactive-project/core/pull/8"
+      "pull_request": "https://github.com/interactive-project/core/pull/8",
+      "merge_commit": "b613e9168630b735d15617f17a949efd54514708",
+      "issue_state": "closed",
+      "compatibility": "decisions/core-effects-v1.md"
     },
     {
       "order": 14,
