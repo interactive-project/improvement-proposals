@@ -1,0 +1,3 @@
+# Code evaluation v1 compatibility
+
+Approved implementation boundary for code#3: optional evaluation and trusted evaluator entry points; no changes to shared Protocol Results, Events catalog, CodeConfig or snapshots. Immutable file digest and submission revision bind grading; trusted evaluators retain private tests server-side, remote learner clients admit aggregate Protocol Results only. Public practice suites are separate data, never automatically added to learner activities. Actual compilers/stdin-enabled execution adapters, assessment authentication/durable idempotency and bundle controls remain host responsibilities. See code/docs/evaluation-v1.md for scoring, category mapping, limits, privacy and unsupported integrations.
