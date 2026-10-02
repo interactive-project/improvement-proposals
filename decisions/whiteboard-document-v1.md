@@ -1,0 +1,3 @@
+# Whiteboard document v1 compatibility
+
+Optional domain-owned document schema, frozen JSON normalization and headless affine geometry. Shared Protocol ActivitySpec and ContentNode remain unchanged. Flat persistent painter order, parent-local coordinates, bounded positive transforms, stable IDs and acyclic groups define portable board semantics. Content/asset references and authored nested activities contain no live canvas/engine handles. Viewport/selection/presence are ephemeral and rejected. Embedded activities still need Core domain/policy checks before execution; no recursive whiteboard embeds. Actions/history/renderers/snapshots/collaboration remain later gates. Full semantics and bounds: whiteboard/docs/document-v1.md.
