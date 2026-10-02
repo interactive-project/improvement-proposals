@@ -130,10 +130,32 @@
         "Provide contract fixtures for an assessed quiz, an unassessed whiteboard and a simulation waiting on asynchronous initialization."
       ],
       "planned_branch": "codex/issue-4",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "bfab4f24711cb54c996a64cb17701caeb9e09fc5",
+        "f3c092030f2d09aea33eee55757f7cf52485e72d"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "f3c092030f2d09aea33eee55757f7cf52485e72d",
+          "url": "https://github.com/interactive-project/protocol/actions/runs/36963031612",
+          "checks": [
+            "21 JS/Python interoperability fixtures",
+            "existing envelope/shared-content suites",
+            "real authored SHA-256 snapshot digests",
+            "identity/attempt/version rejection",
+            "ES2022-only public types and native cancellation compatibility"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-4",
+      "merge_commit": "2ad2093206f7ce0a4c264f4c49b94cbc45d8fc83",
+      "pull_request": "https://github.com/interactive-project/protocol/pull/9",
+      "issue_state": "closed",
+      "compatibility": "Optional interoperability contract; existing envelope/result wire schemas unchanged. Decision: decisions/protocol-interoperability-v1.md."
     },
     {
       "order": 4,
