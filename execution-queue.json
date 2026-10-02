@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/diagram/issues/1"
+    "resume_from": "https://github.com/interactive-project/whiteboard/issues/1"
   },
   "issues": [
     {
@@ -1107,15 +1107,42 @@
         "Test circuit-style component graphs, concept maps and nested groups with identical headless behavior."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "a8a73521158fb5c3f2843b47c600ad048760d450"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "a8a73521158fb5c3f2843b47c600ad048760d450",
+          "url": "https://github.com/interactive-project/diagram/actions/runs/37011321405",
+          "checks": [
+            "Circuit/concept/nested group fixtures and offline ContentNode validation",
+            "Duplicate/dangling/cycle/port/view rejection",
+            "Actual Core atomic graph actions, rollback and cascade policies",
+            "Headless TypeScript consumer"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "a8a73521158fb5c3f2843b47c600ad048760d450",
+          "url": "https://github.com/interactive-project/diagram/actions/runs/37011322469",
+          "checks": [
+            "Circuit/concept/nested group fixtures and offline ContentNode validation",
+            "Duplicate/dangling/cycle/port/view rejection",
+            "Actual Core atomic graph actions, rollback and cascade policies",
+            "Headless TypeScript consumer"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-1",
       "pull_request": "https://github.com/interactive-project/diagram/pull/4",
-      "compatibility": "decisions/diagram-model-v1.md"
+      "compatibility": "decisions/diagram-model-v1.md",
+      "issue_state": "closed",
+      "merge_commit": "bd28f5653b1801a76f266e2d44224c365cf9b182"
     },
     {
       "order": 24,
