@@ -1107,10 +1107,15 @@
         "Test circuit-style component graphs, concept maps and nested groups with identical headless behavior."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "a8a73521158fb5c3f2843b47c600ad048760d450"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-1",
+      "pull_request": "https://github.com/interactive-project/diagram/pull/4",
+      "compatibility": "decisions/diagram-model-v1.md"
     },
     {
       "order": 24,
