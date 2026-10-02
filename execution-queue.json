@@ -223,10 +223,31 @@
         "Specify an advertised compatibility matrix and release gate for oldest/newest supported contract versions."
       ],
       "planned_branch": "codex/issue-6",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "1f6788cef437af07acbcab3d133385b95dffa371"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "1f6788cef437af07acbcab3d133385b95dffa371",
+          "url": "https://github.com/interactive-project/protocol/actions/runs/36966121578",
+          "checks": [
+            "lossless multistep migration and rejection fixtures",
+            "unknown optional extension preservation",
+            "30 planned engine/host combinations",
+            "exact matrix versus implemented schemas",
+            "ES2022-only declarations and existing JS/TS/Python suites"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-6",
+      "merge_commit": "0280e004ba863621a257b96819f34295c8db0ea7",
+      "pull_request": "https://github.com/interactive-project/protocol/pull/11",
+      "issue_state": "closed",
+      "compatibility": "No wire changes or production migration. Unreleased engines/hosts explicitly planned; oldest/newest release gate specified. Decision: decisions/protocol-evolution-v1.md."
     },
     {
       "order": 6,
