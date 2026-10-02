@@ -23,9 +23,7 @@
       "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
-    "paused": true,
-    "paused_on": "2026-10-02",
-    "pause_reason": "User requested stopping after events #1 PR merge and closure.",
+    "paused": false,
     "resume_from": "https://github.com/interactive-project/core/issues/3"
   },
   "issues": [
@@ -587,10 +585,16 @@
         "Test out-of-order code runs, evaluation cancellation and failure of an optional driver."
       ],
       "planned_branch": "codex/issue-3",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "1575c8d4859722959311061a8b11a6d5628feeb5",
+        "46dba9a0ce8f8c50b6492b9cd434959570312094",
+        "e927861ec4ae28f84c8fee87768b732e3ae9126c"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-3",
+      "pull_request": "https://github.com/interactive-project/core/pull/8"
     },
     {
       "order": 14,
