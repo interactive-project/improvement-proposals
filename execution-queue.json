@@ -1049,10 +1049,15 @@
         "Test deterministic grading fixtures, partial credit, redacted feedback and retries without double counting."
       ],
       "planned_branch": "codex/issue-3",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "fae81ae1b867b5ee467ac310dac8b653413d2e5a"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-3",
+      "pull_request": "https://github.com/interactive-project/code/pull/7",
+      "compatibility": "decisions/code-evaluation-v1.md"
     },
     {
       "order": 23,
