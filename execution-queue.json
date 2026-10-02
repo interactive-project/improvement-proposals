@@ -22,7 +22,7 @@
       "branch": "main",
       "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
     },
-    "mode": "Sequential implementation in this conversation, issue branches and GitHub Actions verification."
+    "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next."
   },
   "issues": [
     {
@@ -43,7 +43,7 @@
         "Specify optional generated TypeScript types and Zod integration as projections of the public contract, including handling of constraints that cannot be represented faithfully."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "implemented_verified",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "efadb1fb2eb380564f551c6847354cb0f48c3176"
@@ -63,7 +63,10 @@
         }
       ],
       "actual_branch": "codex/issue-2",
-      "compatibility": "No authored wire schema or diagnostic catalog changed. Added optional TypeScript declarations; Core and host compatibility awaits consumer implementations."
+      "compatibility": "No authored wire schema or diagnostic catalog changed. Added optional TypeScript declarations; Core and host compatibility awaits consumer implementations.",
+      "pull_request": "https://github.com/interactive-project/protocol/pull/7",
+      "merge_commit": "3070822c9780f44d971c09bebea7069c1096db09",
+      "issue_state": "closed"
     },
     {
       "order": 2,
