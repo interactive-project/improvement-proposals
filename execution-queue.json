@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/flashcards/issues/2"
+    "resume_from": "https://github.com/interactive-project/code/issues/1"
   },
   "issues": [
     {
@@ -892,14 +892,36 @@
         "Test study completion, interrupted review, disabled telemetry and privacy filtering."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "5c3b5bb252cc99e6b8c2a511b321339adf784717"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "5c3b5bb252cc99e6b8c2a511b321339adf784717",
+          "url": "https://github.com/interactive-project/flashcards/actions/runs/37005621169",
+          "checks": [
+            "Flashcard conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "5c3b5bb252cc99e6b8c2a511b321339adf784717",
+          "url": "https://github.com/interactive-project/flashcards/actions/runs/37005625003",
+          "checks": [
+            "Flashcard conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-2",
-      "pull_request": "https://github.com/interactive-project/flashcards/pull/5"
+      "pull_request": "https://github.com/interactive-project/flashcards/pull/5",
+      "issue_state": "closed",
+      "merge_commit": "c637aa5c9c0db0cebf0f9d917ea941d3473d2ea8",
+      "compatibility": "decisions/flashcards-sessions-v1.md"
     },
     {
       "order": 20,
