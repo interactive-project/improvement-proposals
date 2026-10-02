@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/code/issues/1"
+    "resume_from": "https://github.com/interactive-project/code/issues/2"
   },
   "issues": [
     {
@@ -943,14 +943,36 @@
         "Test replacing editors without changing the activity spec or persisted learner files."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "b5d697aae4c37278ee8eebbaf657c3a21ee12e28"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "b5d697aae4c37278ee8eebbaf657c3a21ee12e28",
+          "url": "https://github.com/interactive-project/code/actions/runs/37006806426",
+          "checks": [
+            "Code conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "b5d697aae4c37278ee8eebbaf657c3a21ee12e28",
+          "url": "https://github.com/interactive-project/code/actions/runs/37006806312",
+          "checks": [
+            "Code conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-1",
-      "pull_request": "https://github.com/interactive-project/code/pull/5"
+      "pull_request": "https://github.com/interactive-project/code/pull/5",
+      "issue_state": "closed",
+      "merge_commit": "9a36380a3dcb62f3d8bbcad64a4e7e8e6a22b9b5",
+      "compatibility": "decisions/code-workspace-v1.md"
     },
     {
       "order": 21,
