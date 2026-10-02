@@ -13,10 +13,10 @@ This is a queue, not a completion report. No implementation issue, integration g
 ## Per-issue workflow
 
 1. Re-fetch the issue and comments, check prerequisite completion and implementation commits, inspect the target repository and read its applicable AGENTS.md and contribution instructions.
-2. Start one independent Codex session when that capability is available. Until then, this queue provides handoff records only. Create the issue branch from the latest verified base; for an empty repository, initialize its first commit deliberately.
+2. Work on exactly one issue at a time in this conversation. Independent Codex sessions are unavailable; session_id remains null. Create the issue branch from verified main after the previous issue's PR is merged and its issue closed. For an empty repository, initialize its first commit deliberately.
 3. Implement the issue's full acceptance criteria. Shared contract changes must receive an explicit compatibility decision through improvement-proposals, as required by the issue bodies. Existing code must be reused where appropriate.
 4. Run meaningful fixture, type, runtime and compatibility checks required by the issue. Record exact commands and results, unsupported cases and migration implications.
-5. Commit the issue's changes with a reference to its issue, upload the branch without force-pushing, and record commit SHAs and verification evidence. Dependent work must use these prerequisite commits even if they have not been merged into the default branch.
+5. Commit the issue's changes with a reference to its issue, upload its branch without force-pushing, verify GitHub Actions on the exact commit, merge the PR into main and close the issue with acceptance evidence. Record implementation and merge SHAs, PR, verification and closure. Do not start the next issue until this entire cycle is complete.
 6. Recalculate the remaining order when dependencies or issue states change. Failed verification or unavailable prerequisites block downstream work. Package releases and deployments require their own task scope.
 
 ## Integration gates
@@ -25,7 +25,7 @@ The existing [roadmap issue](https://github.com/interactive-project/improvement-
 
 ## Current execution constraints
 
-The GitHub connection can read the organization repositories. Write access will be established by the publication of this route. The managed workspace is pending and offline and exposes no shell capability. Independent Codex session creation is not exposed by the available tools. None of the queued implementations or per-issue sessions has been started. The execution queue uses null session IDs and empty commit/verification arrays to preserve that distinction.
+The GitHub connection can read the organization repositories. Write access will be established by the publication of this route. The managed workspace is pending and offline and exposes no shell capability. Independent Codex session creation is not exposed by the available tools. Execution is now sequential in this conversation with GitHub Actions for runtime checks. Independent sessions remain unavailable and session IDs stay null. The execution queue records actual per-issue commits, verification, merges and closure; unstarted issues retain empty evidence arrays.
 
 ## Sequential queue
 
