@@ -1,0 +1,3 @@
+# Simulation drivers v1 compatibility
+
+Optional domain-owned config/manifest schemas and trusted asynchronous driver facade preserve shared Protocol/Core/Event contracts. Versioned scalar field descriptors bind parameters/input/state to exact model identity, dimension and units. Required capabilities/operations/default-deny permissions gate initialization; native physics/rendering handles never enter projected JSON state. Counter and analytic ballistic fixtures demonstrate custom/physics-oriented headless behavior. Promise deadlines/cancellation prevent late application but do not claim forced worker/CPU cleanup. Fixed-step scheduling, events, snapshots, scoring and vendor adapters remain later gates. Full semantics: simulation/docs/driver-v1.md.
