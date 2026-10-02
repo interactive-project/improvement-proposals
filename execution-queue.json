@@ -23,11 +23,10 @@
       "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
-    "paused": false,
+    "paused": true,
     "paused_on": "2026-10-02",
-    "pause_reason": null,
-    "resume_from": "https://github.com/interactive-project/events/issues/2",
-    "resumed_on": "2026-10-02"
+    "pause_reason": "User requested stopping after events #1 PR merge and closure.",
+    "resume_from": "https://github.com/interactive-project/registry/issues/1"
   },
   "issues": [
     {
@@ -364,14 +363,27 @@
         "Test cleanup after disposal, multiple subscribers, replay semantics and an observer throwing during activity completion."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [
-        "b31d36d6d2dd98c11a48acb9a02c80ad47c52357"
+      "commits": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "b31d36d6d2dd98c11a48acb9a02c80ad47c52357",
+          "url": "https://github.com/interactive-project/events/actions/runs/36995571622",
+          "checks": [
+            "existing JS/Python catalog fixtures",
+            "ES2022-only TypeScript bus consumer",
+            "FIFO/reentrant delivery and retained-tail replay",
+            "bounded pressure/deduplication",
+            "observer failure during committed completion and disposal"
+          ]
+        }
       ],
-      "verification": [],
-      "actual_branch": "codex/issue-2",
-      "pull_request": "https://github.com/interactive-project/events/pull/5"
+      "merge_commit": "ebea0bb90db349e9f83b713bfa1871113868671e",
+      "issue_state": "closed",
+      "compatibility": "Optional live bus; existing wire schemas unchanged. Core transaction/outbox and remote telemetry remain separate gates. Decision: decisions/events-delivery-v1.md."
     },
     {
       "order": 9,
