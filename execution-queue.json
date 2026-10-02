@@ -1,0 +1,1782 @@
+{
+  "schema_version": 1,
+  "organization": "interactive-project",
+  "captured_on": "2026-10-02",
+  "repository_count": 26,
+  "open_issue_count": 72,
+  "completed_foundations": [
+    {
+      "issue_url": "https://github.com/interactive-project/protocol/issues/1",
+      "status": "completed",
+      "verified_from": "GitHub issue state and acceptance checklist"
+    }
+  ],
+  "ordering_rule": "Dependencies first; P0 before P1 among ready issues; original creation order for ties.",
+  "execution": {
+    "requested": "A separate Codex session for each issue, followed by verified commits and upload.",
+    "session_creation_available": false,
+    "runtime_available": false,
+    "note": "Records are execution handoffs. They do not assert that any Codex session, issue branch, implementation, test, commit or upload has started.",
+    "route_publication": {
+      "repository": "interactive-project/improvement-proposals",
+      "branch": "main",
+      "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
+    }
+  },
+  "issues": [
+    {
+      "order": 1,
+      "repository": "interactive-project/protocol",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/protocol/issues/2",
+      "title": "Publish the JSON Schema contract and portable validation diagnostics",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Select and document the schema dialect, stable schema identifiers, references and offline resolution strategy.",
+        "Define validation results with stable error codes, JSON Pointer locations, severity and safe human-readable messages.",
+        "Require schema/type consistency checks and the same valid/invalid fixture outcomes in JavaScript and at least one independent language validator.",
+        "Disable arbitrary remote schema loading and define input depth, collection size and string length limits.",
+        "Specify optional generated TypeScript types and Zod integration as projections of the public contract, including handling of constraints that cannot be represented faithfully."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 2,
+      "repository": "interactive-project/protocol",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/protocol/issues/3",
+      "title": "Define shared content, accessibility and localization extension points",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define a shared content reference or base envelope that avoids a circular dependency between protocol and content-node.",
+        "Specify locale identifiers, fallback behavior, directionality, language metadata and plain-text alternatives.",
+        "Define accessibility metadata for instructions, labels, descriptions and equivalent nonvisual experiences; metadata alone must not claim UI conformance.",
+        "Specify asset references, attribution and integrity metadata without embedding framework components or provider credentials.",
+        "Provide nested quiz, flashcard and whiteboard examples that reuse identical content and localization contracts."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 3,
+      "repository": "interactive-project/protocol",
+      "issue_number": 4,
+      "issue_url": "https://github.com/interactive-project/protocol/issues/4",
+      "title": "Specify engine, action, result and snapshot interoperability contracts",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Specify typed action envelopes, activity/session/attempt identity and structured rejected-action errors.",
+        "Define result statuses, score scale and bounds, partial credit, evidence references and the difference between pending, failed and unevaluable.",
+        "Define snapshots with protocol, activity schema and engine-state versions, activity identity and driver-specific extension boundaries.",
+        "Document the create/dispatch/evaluate/serialize/restore contract, including an explicit strategy for asynchronous effects and evaluation.",
+        "Provide contract fixtures for an assessed quiz, an unassessed whiteboard and a simulation waiting on asynchronous initialization."
+      ],
+      "planned_branch": "codex/issue-4",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 4,
+      "repository": "interactive-project/protocol",
+      "issue_number": 5,
+      "issue_url": "https://github.com/interactive-project/protocol/issues/5",
+      "title": "Define capability declarations and the generative activity validation pipeline",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/2",
+        "https://github.com/interactive-project/protocol/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Define interactive, evaluable, collaborative, offline, deterministic, resumable and aiGeneratable with precise semantics and conditional driver support.",
+        "Specify ordered structural, semantic, permission and capability validation stages with stable rejection diagnostics.",
+        "Define policy-controlled network, execution, media and resource access; activity content cannot escalate host permissions.",
+        "Specify a machine-readable generation catalog with supported types, exact schema versions, required capabilities and schema references.",
+        "Provide acceptance/rejection fixtures for unknown types, missing drivers, unsupported versions, prohibited execution and oversized generated input."
+      ],
+      "planned_branch": "codex/issue-5",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 5,
+      "repository": "interactive-project/protocol",
+      "issue_number": 6,
+      "issue_url": "https://github.com/interactive-project/protocol/issues/6",
+      "title": "Establish schema evolution, migrations and cross-library conformance fixtures",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/2",
+        "https://github.com/interactive-project/protocol/issues/4",
+        "https://github.com/interactive-project/protocol/issues/5"
+      ],
+      "acceptance_criteria": [
+        "Define compatible and breaking changes to specs, events, actions, results and snapshots with concrete examples.",
+        "Require explicit migration paths, source/target versions, validation before and after migration and no silent data loss.",
+        "Define behavior for unknown optional extensions and unsupported required capabilities.",
+        "Create a planned conformance fixture catalog covering all activity engines and React, Vue, Svelte and DOM hosts.",
+        "Specify an advertised compatibility matrix and release gate for oldest/newest supported contract versions."
+      ],
+      "planned_branch": "codex/issue-6",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 6,
+      "repository": "interactive-project/content-node",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/content-node/issues/1",
+      "title": "Define portable rich content variants and recursive composition",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/3",
+        "https://github.com/interactive-project/protocol/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define discriminated schemas with versioning, required fields and deterministic normalization for every variant.",
+        "Specify bounded composition, asset references, captions, transcripts, alternative text and language metadata.",
+        "Keep code snippets distinct from executable code activities and math source distinct from rendered markup.",
+        "Provide fixtures for multilingual text, mathematical prompts, media captions and mixed content.",
+        "Use protocol extension points without requiring protocol to import this package."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 7,
+      "repository": "interactive-project/events",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/events/issues/1",
+      "title": "Define the shared event envelope and typed activity event catalog",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/4",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Use protocol identity contracts and define event id, type, activityId, activityType, event schema version, timestamp unit and payload.",
+        "Specify session/attempt correlation, per-source sequence and causation identifiers without assuming globally ordered clocks.",
+        "Catalog activity.created/started/resumed/interacted/completed/failed, attempt.started/submitted, answer.changed/submitted and hint.requested.",
+        "Define namespaced domain events including code.executed, diagram.nodeCreated, whiteboard.objectCreated and simulation lifecycle/parameter events.",
+        "Provide valid/invalid fixtures and an event version evolution policy."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 8,
+      "repository": "interactive-project/events",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/events/issues/2",
+      "title": "Specify event subscriptions, delivery guarantees and engine isolation",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/events/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Specify subscribe/unsubscribe behavior, ordering within a session and exact lifecycle emission points.",
+        "Define buffering limits, backpressure, reentrant dispatch behavior and isolation of failing subscribers.",
+        "Keep state transitions deterministic; subscriber failures must not silently roll back committed state.",
+        "Specify duplicate detection expectations and distinguish local delivery guarantees from remote delivery guarantees.",
+        "Test cleanup after disposal, multiple subscribers, replay semantics and an observer throwing during activity completion."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 9,
+      "repository": "interactive-project/registry",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/registry/issues/1",
+      "title": "Define plugin registration and independent engine/renderer resolution",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/5",
+        "https://github.com/interactive-project/protocol/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Define manifests with type, supported versions, schema reference, engine factory, evaluator and capability declarations.",
+        "Define separate renderer registrations keyed by activity type, host kind and compatible contract versions.",
+        "Reject duplicate or conflicting registrations with actionable diagnostics and documented override rules.",
+        "Specify registration/unregistration lifecycle and behavior for already running sessions.",
+        "Test one quiz engine resolved by React, Vue, Svelte and DOM registrations without loading those frameworks into the engine."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 10,
+      "repository": "interactive-project/registry",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/registry/issues/2",
+      "title": "Specify version negotiation, lazy loading and capability-aware lookup",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/registry/issues/1",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Define exact-version and supported-range resolution with deterministic tie-breaking and no implicit major-version upgrade.",
+        "Match requested capabilities against both plugin support and host policy; explain each rejection.",
+        "Define asynchronous loader deduplication, cancellation, timeout and retry behavior.",
+        "Reject circular plugin dependencies and conflicting transitive protocol requirements.",
+        "Test unsupported versions, missing renderer, unavailable WASM driver and offline-only capability queries."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 11,
+      "repository": "interactive-project/core",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/core/issues/1",
+      "title": "Specify the headless activity lifecycle and deterministic dispatch contract",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/4",
+        "https://github.com/interactive-project/registry/issues/1",
+        "https://github.com/interactive-project/events/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define legal lifecycle transitions and structured errors for invalid actions or actions after disposal.",
+        "Make state access read-only from the host and specify atomic transitions and subscription notifications.",
+        "Inject clocks, random sources and external services instead of accessing them implicitly.",
+        "Support simple reducers and optional state-machine implementations such as XState behind the same engine contract.",
+        "Test lifecycle parity using a quiz engine and a minimal custom engine, including repeated disposal and cancellation."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 12,
+      "repository": "interactive-project/core",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/core/issues/2",
+      "title": "Implement the planned load pipeline for schemas, policies and plugin resolution",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/1",
+        "https://github.com/interactive-project/protocol/issues/5",
+        "https://github.com/interactive-project/registry/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Run schema, semantic, permission and capability checks in the documented order before executing plugin code.",
+        "Resolve exact compatible engine and optional renderer through registry contracts.",
+        "Return stage-specific diagnostics with JSON Pointer paths and no secrets or unsafe raw content.",
+        "Define cancellation, timeout and cleanup for partially completed asynchronous loading.",
+        "Test malformed quiz input, unknown activity versions, missing drivers and host-rejected execution permissions."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 13,
+      "repository": "interactive-project/core",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/core/issues/3",
+      "title": "Define asynchronous effects, evaluation and cancellation semantics",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/1",
+        "https://github.com/interactive-project/protocol/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Define effect requests and correlated completion/failure actions with explicit execution ownership.",
+        "Prevent stale or duplicate results from updating a newer attempt or disposed activity.",
+        "Specify pending evaluation, timeout, cancellation and retry semantics separately from incorrect learner answers.",
+        "Require host-provided execution/network services and preserve deterministic replay through recorded results.",
+        "Test out-of-order code runs, evaluation cancellation and failure of an optional driver."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 14,
+      "repository": "interactive-project/core",
+      "issue_number": 4,
+      "issue_url": "https://github.com/interactive-project/core/issues/4",
+      "title": "Specify snapshots, restore validation and migration orchestration",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/3",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Serialize portable state through the common snapshot envelope without DOM nodes, functions, credentials or driver handles.",
+        "Validate activity identity and all declared versions before restore; select explicit migrations when necessary.",
+        "Define transactional restore and recoverable errors for corrupted or incompatible snapshots.",
+        "Specify whether in-flight effects are cancelled or reissued and how duplicate submissions are prevented.",
+        "Test quiz and flashcard round trips, cross-host restore and unsupported simulation-driver snapshot versions."
+      ],
+      "planned_branch": "codex/issue-4",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 15,
+      "repository": "interactive-project/quiz",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/quiz/issues/1",
+      "title": "Define quiz schemas for the initial eight question types",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/content-node/issues/1",
+        "https://github.com/interactive-project/protocol/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define unique question/option identifiers, ContentNode prompts/options and typed responses for each question kind.",
+        "Specify numeric units and tolerance, text normalization, blank identifiers, matching cardinality and ordering constraints.",
+        "Define author-only solution data separately from the learner-delivered representation.",
+        "Validate empty/duplicate options, impossible answer keys, malformed pairings and unsupported content.",
+        "Provide at least one valid, invalid and localized fixture for every initial question type."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 16,
+      "repository": "interactive-project/quiz",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/quiz/issues/2",
+      "title": "Specify scoring, answer evaluation and assessment trust boundaries",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/quiz/issues/1",
+        "https://github.com/interactive-project/core/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Define score bounds, weights, partial-credit rules, penalties and aggregation for all initial question types.",
+        "Specify numeric tolerance, accepted short-answer normalization and ungradable-response errors precisely.",
+        "Keep hidden answer keys and trusted tests out of learner-facing specs, events and snapshots in secure assessment mode.",
+        "Define pending/error states and result validation for host-provided remote evaluators.",
+        "Test boundary values, repeated evaluation idempotency, unanswered questions and equivalent local/remote result envelopes."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 17,
+      "repository": "interactive-project/quiz",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/quiz/issues/3",
+      "title": "Define attempts, navigation, submission and feedback state transitions",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/quiz/issues/2",
+        "https://github.com/interactive-project/core/issues/1",
+        "https://github.com/interactive-project/events/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Specify start, answer change, submit, retry, skip and review actions and their allowed states.",
+        "Define attempt limits, navigation modes, unanswered submission rules and optional time limits using an injected clock.",
+        "Specify feedback timing and hint visibility without leaking solutions before policy allows.",
+        "Emit standard attempt/answer/activity events once per committed transition.",
+        "Test resuming a partially completed attempt, double submission and late evaluation results."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 18,
+      "repository": "interactive-project/flashcards",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/flashcards/issues/1",
+      "title": "Define portable decks, cards and headless study actions",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/content-node/issues/1",
+        "https://github.com/interactive-project/core/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Specify stable deck/card identifiers, duplicate detection and empty-deck behavior.",
+        "Define reveal, next, previous, skip and rate actions with explicit state constraints.",
+        "Support ordered, seeded-random, guided and exam-like study policies without requiring spaced repetition.",
+        "Keep rating values and normalized review outcomes independent of mouse, swipe, keyboard or voice input.",
+        "Test multilingual rich-content cards, repeated reveal and out-of-range navigation."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 19,
+      "repository": "interactive-project/flashcards",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/flashcards/issues/2",
+      "title": "Specify study sessions, review events and resumable progress",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/flashcards/issues/1",
+        "https://github.com/interactive-project/events/issues/1",
+        "https://github.com/interactive-project/core/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Define session start/completion, card exposure and review outcome events with standard correlation identifiers.",
+        "Specify optional self-reported ratings separately from objectively evaluated correctness.",
+        "Persist card ordering, current position, revealed state and review history under versioned snapshots.",
+        "Restore seeded sessions consistently and define behavior when the source deck changes.",
+        "Test study completion, interrupted review, disabled telemetry and privacy filtering."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 20,
+      "repository": "interactive-project/code",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/code/issues/1",
+      "title": "Define code activity files, editor drivers and workspace actions",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/2",
+        "https://github.com/interactive-project/content-node/issues/1",
+        "https://github.com/interactive-project/core/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define normalized relative paths, stable file identities, language identifiers and entrypoint resolution.",
+        "Reject path traversal, duplicate paths, unsupported encodings and edits to read-only files.",
+        "Specify create/edit/rename/delete actions and a neutral editor driver for selection, diagnostics and text updates.",
+        "Plan CodeMirror 6 as the initial optional integration and Monaco as an alternative with explicit device/support constraints to validate during implementation.",
+        "Test replacing editors without changing the activity spec or persisted learner files."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 21,
+      "repository": "interactive-project/code",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/code/issues/2",
+      "title": "Specify isolated execution providers, resource limits and cancellation",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/code/issues/1",
+        "https://github.com/interactive-project/core/issues/3",
+        "https://github.com/interactive-project/protocol/issues/5"
+      ],
+      "acceptance_criteria": [
+        "Define run requests, execution IDs, language/runtime identity, stdout/stderr messages and terminal outcomes.",
+        "Require host-enforced time, memory, output, filesystem and network limits; document isolation guarantees per provider.",
+        "Specify cancellation and timeout cleanup including child processes/workers and delayed output.",
+        "Prevent credentials and host internals from entering learner workspaces or execution logs.",
+        "Test forbidden network/filesystem requests, infinite execution, excessive output and stale run responses."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 22,
+      "repository": "interactive-project/code",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/code/issues/3",
+      "title": "Define test-based evaluation, hidden tests and feedback results",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/code/issues/2",
+        "https://github.com/interactive-project/quiz/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Specify public tests, private evaluator-owned tests and normalized case outcomes with score aggregation.",
+        "Ensure hidden tests and expected outputs are not included in learner specs, browser bundles, snapshots or telemetry.",
+        "Distinguish compile/runtime errors, assertion failures, infrastructure failures and pending evaluation.",
+        "Associate results with an immutable submitted file revision and reject stale evaluation responses.",
+        "Test deterministic grading fixtures, partial credit, redacted feedback and retries without double counting."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 23,
+      "repository": "interactive-project/diagram",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/diagram/issues/1",
+      "title": "Define semantic graph schemas, ports, groups and editing actions",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/content-node/issues/1",
+        "https://github.com/interactive-project/core/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define stable node/edge/port/group IDs, ContentNode labels, typed attributes and directed/undirected edge semantics.",
+        "Specify dangling edge, duplicate ID, group cycle and port compatibility validation.",
+        "Define atomic add/update/remove/connect actions and cascading deletion policy.",
+        "Separate semantic graph data from view coordinates and optional layout hints.",
+        "Test circuit-style component graphs, concept maps and nested groups with identical headless behavior."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 24,
+      "repository": "interactive-project/whiteboard",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/whiteboard/issues/1",
+      "title": "Define the semantic whiteboard object model and document schema",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/content-node/issues/1",
+        "https://github.com/interactive-project/protocol/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define stable object IDs, positions, sizes, coordinate units, ordering and transforms.",
+        "Specify shared ContentNode integration and asset references rather than canvas-native serialized objects.",
+        "Validate connector references, group cycles, invalid geometry and document size limits.",
+        "Separate persistent document state from viewport, selection, pointer position and other ephemeral user state.",
+        "Provide semantic fixtures for a teaching board with text, formulas, diagrams and a nested quiz."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 25,
+      "repository": "interactive-project/whiteboard",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/whiteboard/issues/2",
+      "title": "Specify whiteboard actions, transactions and local undo/redo",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/whiteboard/issues/1",
+        "https://github.com/interactive-project/core/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define insert/update/delete/group/ungroup/connect and bounded drawing actions.",
+        "Specify atomic multi-object transactions, undo/redo grouping and history retention limits.",
+        "Define selection and viewport as host-scoped state unless explicitly shared.",
+        "Specify deletion/undo behavior for connected objects and nested groups.",
+        "Test repeated actions, interrupted gestures, batch rollback and stable IDs after undo/redo."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 26,
+      "repository": "interactive-project/simulation",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/simulation/issues/1",
+      "title": "Define SimulationSpec and the pluggable SimulationDriver lifecycle",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/4",
+        "https://github.com/interactive-project/core/issues/3",
+        "https://github.com/interactive-project/protocol/issues/5"
+      ],
+      "acceptance_criteria": [
+        "Define versioned model/parameter/input/state descriptors and initialize, step, input, reset and dispose semantics.",
+        "Specify asynchronous driver initialization, supported dimensions, units and capability negotiation.",
+        "Separate simulation model data from visual renderer state and vendor-native physics objects.",
+        "Define parameter bounds, invalid inputs and structured initialization/step failures.",
+        "Provide a minimal deterministic custom-model fixture and a physics-oriented fixture."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 27,
+      "repository": "interactive-project/simulation",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/simulation/issues/2",
+      "title": "Specify time stepping, reproducibility and resource controls",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define delta units, fixed-step policy, accumulated time, pause/resume, maximum catch-up and reset behavior.",
+        "Inject seeded random sources and document that determinism is driver/version/platform-dependent.",
+        "Separate wall-clock rendering cadence from simulation stepping.",
+        "Define per-step budgets, cancellation and recovery from invalid numeric state.",
+        "Test equivalent action traces, large time gaps, repeated resets and tolerance-based comparisons for nondeterministic drivers."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 28,
+      "repository": "interactive-project/improvement-proposals",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/improvement-proposals/issues/1",
+      "title": "Record Interactive Project repository ownership and dependency rules",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/1",
+        "https://github.com/interactive-project/core/issues/1",
+        "https://github.com/interactive-project/registry/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Assign protocol, content-node, core/runtime, registry, events, all domain engines, hosts and optional drivers to their corresponding repositories.",
+        "Use core as the runtime repository and react/vue/svelte as adapter repositories rather than creating duplicate runtime or adapter-* repositories.",
+        "Document allowed dependency directions and prohibit framework/style dependencies in protocol, runtime and domain engines.",
+        "Define interface ownership, how cross-repository changes are proposed and how breaking changes are approved/documented.",
+        "Record optional technology integrations as replaceable drivers and avoid assuming an npm scope is already available."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 29,
+      "repository": "interactive-project/content-node",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/content-node/issues/2",
+      "title": "Specify content renderer drivers, safe rendering and fallback behavior",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/content-node/issues/1",
+        "https://github.com/interactive-project/protocol/issues/5"
+      ],
+      "acceptance_criteria": [
+        "Define driver registration, capability detection, lifecycle and fallback to accessible plain text or explicit unsupported content.",
+        "Specify markdown/raw-HTML policy, URI allowlists and host-controlled remote asset loading.",
+        "Require math and code renderers to preserve source text and provide nonvisual alternatives.",
+        "Ensure unavailable media, unsupported languages and rendering errors produce localized recoverable states.",
+        "Test equivalent semantics in DOM, React, Vue and Svelte fixtures without assuming identical markup."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 30,
+      "repository": "interactive-project/content-node",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/content-node/issues/3",
+      "title": "Plan content serialization, localization and compatibility tests",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/content-node/issues/1",
+        "https://github.com/interactive-project/content-node/issues/2",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Require round-trip equality for canonical content values and explicit migration for changed variants.",
+        "Test the same content fixture in quiz prompts, flashcard faces, diagram labels and whiteboard objects.",
+        "Define asset portability behavior for exported activities and avoid storing temporary object URLs as durable references.",
+        "Test locale fallback, right-to-left content, missing translations and nested content size limits.",
+        "Document renderer extension compatibility and unsupported optional content fallback."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 31,
+      "repository": "interactive-project/events",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/events/issues/3",
+      "title": "Design privacy-aware telemetry sinks and future evidence integrations",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/events/issues/2",
+        "https://github.com/interactive-project/protocol/issues/5"
+      ],
+      "acceptance_criteria": [
+        "Default to data minimization; raw learner answers, source code and personal identity require explicit host configuration.",
+        "Define redaction, consent changes, offline queues, bounded retention, retry limits and sink cancellation.",
+        "Specify idempotency keys for retried export and how dropped or rejected events are observable.",
+        "Document a mapping seam for xAPI/evidence systems without making those formats engine dependencies.",
+        "Test that disabling telemetry does not change activity state or prevent local operation."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 32,
+      "repository": "interactive-project/registry",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/registry/issues/3",
+      "title": "Expose a serializable generation catalog and plugin conformance checklist",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/registry/issues/2",
+        "https://github.com/interactive-project/protocol/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Export type/version/schema/capability descriptors as plain JSON with stable ordering and cache identity.",
+        "Exclude credentials, executable functions and disallowed capabilities from host-specific catalogs.",
+        "Document schema retrieval and schema-size limits for structured generation consumers.",
+        "Define plugin conformance checks for lifecycle, events, results and snapshot round trips.",
+        "Test catalog consistency after lazy loading, registration changes and capability filtering."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 33,
+      "repository": "interactive-project/core",
+      "issue_number": 5,
+      "issue_url": "https://github.com/interactive-project/core/issues/5",
+      "title": "Plan runtime conformance, packaging boundaries and the first vertical slice",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/2",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/registry/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Define a fixture-driven test harness for every ActivityEngine contract method and lifecycle event.",
+        "Require headless import and execution in Node without browser globals or installed UI frameworks.",
+        "Test generation catalog to validated quiz to answer to result to snapshot to restore as a complete scenario.",
+        "Specify public entry points, supported environments and peer dependency/version policy without committing to an unverified npm scope.",
+        "Define compatibility CI expectations for independent repository releases and optional XState implementations."
+      ],
+      "planned_branch": "codex/issue-5",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 34,
+      "repository": "interactive-project/quiz",
+      "issue_number": 4,
+      "issue_url": "https://github.com/interactive-project/quiz/issues/4",
+      "title": "Create the quiz interoperability and generative activity acceptance plan",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/quiz/issues/3",
+        "https://github.com/interactive-project/core/issues/5",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Register exact quiz schema/engine versions and declare capabilities that reflect evaluator dependencies.",
+        "Define snapshot round trips for every response kind and migration rejection cases.",
+        "Plan identical action traces through headless, DOM, React, Vue and Svelte hosts and compare results/events.",
+        "Test generated JSON through structural, semantic, permission and capability validation before start.",
+        "Require accessible labels, response alternatives and localization fixtures in the renderer contract; defer formula, essay, oral and hotspot questions as versioned extensions."
+      ],
+      "planned_branch": "codex/issue-4",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 35,
+      "repository": "interactive-project/renderer-dom",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/renderer-dom/issues/1",
+      "title": "Define the vanilla DOM host and renderer registration lifecycle",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/5",
+        "https://github.com/interactive-project/content-node/issues/2",
+        "https://github.com/interactive-project/registry/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define mount/update/unmount with runtime session ownership and independent registry renderer lookup.",
+        "Render initial quiz and flashcard fixtures through semantic actions and ContentNode drivers.",
+        "Support loading, unsupported activity, validation failure and runtime error states.",
+        "Clean up subscriptions, listeners, assets and child activities on unmount.",
+        "Keep engines usable without document/window and test mounting multiple isolated activity instances."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 36,
+      "repository": "interactive-project/renderer-dom",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/renderer-dom/issues/2",
+      "title": "Specify accessible interactions, localization and style-neutral rendering",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/renderer-dom/issues/1",
+        "https://github.com/interactive-project/protocol/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Define semantic controls, focus movement, keyboard navigation and announcements for quiz and flashcard states.",
+        "Expose slots or rendering hooks, semantic data attributes and optional design tokens without mandatory Tailwind, Material or other styling dependencies.",
+        "Respect localized labels, right-to-left text and reduced-motion preferences.",
+        "Provide accessible content fallbacks and nonvisual interaction alternatives for advanced activities.",
+        "Plan automated semantic checks plus manual keyboard and assistive-technology acceptance scenarios."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 37,
+      "repository": "interactive-project/improvement-proposals",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/improvement-proposals/issues/2",
+      "title": "Define independent releases, compatibility matrices and contract change proposals",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/6",
+        "https://github.com/interactive-project/core/issues/5",
+        "https://github.com/interactive-project/improvement-proposals/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define a proposal template covering motivation, affected contracts, backward compatibility, migration, security and accessibility implications.",
+        "Require compatibility ranges for protocol, core, plugins, adapters and external driver dependencies.",
+        "Define a cross-repository test/release gate based on shared conformance fixtures.",
+        "Specify deprecation windows, migration documentation and upgrade order for dependent packages.",
+        "Document npm naming verification and versioning strategy before any publication; no package publishing is part of this backlog-creation task."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 38,
+      "repository": "interactive-project/improvement-proposals",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/improvement-proposals/issues/3",
+      "title": "Track the staged implementation roadmap and cross-library integration gates",
+      "priority": "P0",
+      "dependencies": [
+        "https://github.com/interactive-project/improvement-proposals/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Gate 1: approve protocol/content/events/registry contracts and core lifecycle/policy semantics.",
+        "Gate 2: demonstrate generated JSON to validated quiz to evaluation to persistence through a DOM host.",
+        "Gate 3: verify flashcards and React/Vue/Svelte parity, including cross-host restore and style independence.",
+        "Gate 4: integrate code, diagrams, whiteboard embedding and simulation drivers with optional collaboration/scheduling.",
+        "Gate 5: verify the compatibility matrix, privacy/accessibility requirements and independent release readiness; track explicit blockers and deferred advanced question types."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 39,
+      "repository": "interactive-project/flashcards",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/flashcards/issues/3",
+      "title": "Define optional scheduling integration and renderer conformance",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/flashcards/issues/2",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Define a narrow scheduler port using stable card IDs and review outcomes, with no algorithm-specific fields in deck schemas.",
+        "Specify due-card filtering, missing/deleted cards, empty queues and host-controlled session limits.",
+        "Ensure schedulers receive only committed ratings and repeated actions cannot record duplicate reviews.",
+        "Plan the same reveal/rate trace across DOM, React, Vue and Svelte adapters.",
+        "Test unscheduled study and scheduled study against the same deck and snapshot contracts."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 40,
+      "repository": "interactive-project/code",
+      "issue_number": 4,
+      "issue_url": "https://github.com/interactive-project/code/issues/4",
+      "title": "Plan code snapshots, events and framework-independent editor compatibility",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/code/issues/3",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/events/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Persist learner files and portable editor-independent state; specify optional nonessential view-state extensions.",
+        "Emit code execution and activity events with output/source redacted by default.",
+        "Define driver disposal, language-feature capability detection and accessible plain-text fallback.",
+        "Test switching CodeMirror/Monaco integrations and restoring in another framework without data loss.",
+        "Define offline edit-only capability separately from offline execution and evaluation."
+      ],
+      "planned_branch": "codex/issue-4",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 41,
+      "repository": "interactive-project/diagram",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/diagram/issues/2",
+      "title": "Specify layout and graph-analysis driver boundaries",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/diagram/issues/1",
+        "https://github.com/interactive-project/core/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Define versioned graph-to-layout input and positioned-graph output with explicit coordinate units.",
+        "Preserve semantic IDs, ports, groups and attributes through conversion.",
+        "Specify asynchronous layout cancellation and stale-output rejection after edits.",
+        "Define graph algorithm requests/results independently of layout and renderer APIs.",
+        "Test missing optional drivers, unsupported graph features and repeatable seeded results where supported."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 42,
+      "repository": "interactive-project/diagram",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/diagram/issues/3",
+      "title": "Define diagram evaluation hooks, events and portable snapshot tests",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/diagram/issues/2",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/events/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define optional evaluators for connectivity or structure without forcing grading on all diagrams.",
+        "Emit typed node/edge edit events with standard activity and attempt correlation.",
+        "Persist graph state and explicit portable positions while excluding driver caches and renderer handles.",
+        "Plan accessible keyboard/text alternatives and localized graph descriptions at the renderer boundary.",
+        "Test edit/serialize/restore across hosts and compatibility with both ELK and Cytoscape adapters."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 43,
+      "repository": "interactive-project/whiteboard",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/whiteboard/issues/3",
+      "title": "Design the CanvasDriver contract and optional Konva renderer",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/whiteboard/issues/2",
+        "https://github.com/interactive-project/content-node/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define render/update/dispose, hit-testing, coordinate conversion and input-to-semantic-action translation.",
+        "Keep Konva classes and scene serialization outside the public schema and engine state.",
+        "Specify keyboard operation, nonvisual object navigation and alternatives to pointer-only gestures.",
+        "Define viewport virtualization, asset loading and resource cleanup expectations with measurable budgets to establish during implementation.",
+        "Test the same semantic action trace through Konva and a minimal reference driver."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 44,
+      "repository": "interactive-project/whiteboard",
+      "issue_number": 4,
+      "issue_url": "https://github.com/interactive-project/whiteboard/issues/4",
+      "title": "Define embedded activity lifecycle and collaboration-ready persistence",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/whiteboard/issues/3",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/registry/issues/2",
+        "https://github.com/interactive-project/events/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Specify embedded ActivitySpec references, nested instance identity and explicit snapshot ownership.",
+        "Define mount/pause/resume/dispose, event bubbling and prevention of cyclic or excessively deep embedding.",
+        "Require nested activities to pass host policy and capability validation independently.",
+        "Specify local persistence and collaboration extension seams while keeping learner attempts private unless explicitly shared.",
+        "Test a board containing a quiz and diagram, missing renderer fallback and restoring nested state in another host."
+      ],
+      "planned_branch": "codex/issue-4",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 45,
+      "repository": "interactive-project/simulation",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/simulation/issues/3",
+      "title": "Define simulation observations, assessment hooks and event contracts",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation/issues/2",
+        "https://github.com/interactive-project/events/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Define observations, sampled values, experiment runs and optional evaluator outputs using shared result contracts.",
+        "Emit started, paused, parameterChanged, completed and failed events with explicit units and correlation.",
+        "Bound high-frequency event/sampling volume and separate telemetry sampling from simulation state.",
+        "Specify host policy for learner-controlled parameters and read-only model values.",
+        "Test an unassessed sandbox and an assessed target-condition experiment with the same driver boundary."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 46,
+      "repository": "interactive-project/simulation",
+      "issue_number": 4,
+      "issue_url": "https://github.com/interactive-project/simulation/issues/4",
+      "title": "Specify portable snapshots and a simulation driver conformance matrix",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation/issues/2",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Persist model identity, driver/version, seed, logical time and portable state under the shared snapshot envelope.",
+        "Declare when exact resume is supported and when reconstruction or explicit migration is required.",
+        "Reject incompatible native snapshots with actionable errors; never silently substitute another engine.",
+        "Define canonical fixture traces and numeric tolerances for each driver's claimed capabilities.",
+        "Test host/framework changes independently from physics-driver changes."
+      ],
+      "planned_branch": "codex/issue-4",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 47,
+      "repository": "interactive-project/renderer-dom",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/renderer-dom/issues/3",
+      "title": "Plan DOM lifecycle, persistence and cross-host conformance tests",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/renderer-dom/issues/2",
+        "https://github.com/interactive-project/quiz/issues/4",
+        "https://github.com/interactive-project/flashcards/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Execute canonical quiz/flashcard action traces and compare state, results and events with headless execution.",
+        "Test unmount/remount and restoration of snapshots produced by other hosts.",
+        "Require safe rendering of hostile content and policy-controlled asset loading.",
+        "Define import boundaries, browser support targets and bundle/resource baselines.",
+        "Document how diagram, whiteboard and simulation drivers integrate without changing engine contracts."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 48,
+      "repository": "interactive-project/react",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/react/issues/1",
+      "title": "Define the React runtime adapter and lifecycle bindings",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/5",
+        "https://github.com/interactive-project/registry/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define host-owned versus adapter-owned runtime sessions, creation and disposal rules.",
+        "Resolve activity renderers independently from engines and expose loading/error/capability states.",
+        "Translate UI actions into the common dispatch contract without duplicating domain logic.",
+        "Specify behavior for Strict Mode remounts, concurrent rendering and server/client boundaries.",
+        "Test two isolated activities, subscription cleanup and a renderer failure without corrupting engine state."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 49,
+      "repository": "interactive-project/react",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/react/issues/2",
+      "title": "Specify composable react renderers, rich content and accessible interactions",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/react/issues/1",
+        "https://github.com/interactive-project/renderer-dom/issues/2",
+        "https://github.com/interactive-project/content-node/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define renderer registration, slots/composition hooks and localized labels without enforcing a UI toolkit.",
+        "Reuse ContentNode driver semantics and host-controlled asset policies.",
+        "Require keyboard/focus/announcement parity with the DOM reference interaction contract.",
+        "Keep browser-only drivers out of server rendering and define a stable accessible initial/loading state.",
+        "Test custom visual components and missing optional drivers without changes to domain specs."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 50,
+      "repository": "interactive-project/react",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/react/issues/3",
+      "title": "Establish react compatibility, snapshot portability and release checks",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/react/issues/2",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Run identical quiz and flashcard action traces against headless and framework hosts and compare state/events/results.",
+        "Restore a snapshot produced by another host and continue the same attempt without duplicate events.",
+        "Define supported framework and core/protocol version ranges and test their documented boundaries.",
+        "Verify clean import in supported SSR environments and no runtime framework dependency in domain libraries.",
+        "Specify package entry points, optional renderer dependencies and upgrade guidance for breaking adapter changes."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 51,
+      "repository": "interactive-project/vue",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/vue/issues/1",
+      "title": "Define the Vue runtime adapter and lifecycle bindings",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/5",
+        "https://github.com/interactive-project/registry/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define host-owned versus adapter-owned runtime sessions, creation and disposal rules.",
+        "Resolve activity renderers independently from engines and expose loading/error/capability states.",
+        "Translate UI actions into the common dispatch contract without duplicating domain logic.",
+        "Specify behavior for reactive proxy boundaries, watcher cleanup and SSR hydration.",
+        "Test two isolated activities, subscription cleanup and a renderer failure without corrupting engine state."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 52,
+      "repository": "interactive-project/vue",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/vue/issues/2",
+      "title": "Specify composable vue renderers, rich content and accessible interactions",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/vue/issues/1",
+        "https://github.com/interactive-project/renderer-dom/issues/2",
+        "https://github.com/interactive-project/content-node/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define renderer registration, slots/composition hooks and localized labels without enforcing a UI toolkit.",
+        "Reuse ContentNode driver semantics and host-controlled asset policies.",
+        "Require keyboard/focus/announcement parity with the DOM reference interaction contract.",
+        "Keep browser-only drivers out of server rendering and define a stable accessible initial/loading state.",
+        "Test custom visual components and missing optional drivers without changes to domain specs."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 53,
+      "repository": "interactive-project/vue",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/vue/issues/3",
+      "title": "Establish vue compatibility, snapshot portability and release checks",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/vue/issues/2",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Run identical quiz and flashcard action traces against headless and framework hosts and compare state/events/results.",
+        "Restore a snapshot produced by another host and continue the same attempt without duplicate events.",
+        "Define supported framework and core/protocol version ranges and test their documented boundaries.",
+        "Verify clean import in supported SSR environments and no runtime framework dependency in domain libraries.",
+        "Specify package entry points, optional renderer dependencies and upgrade guidance for breaking adapter changes."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 54,
+      "repository": "interactive-project/svelte",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/svelte/issues/1",
+      "title": "Define the Svelte runtime adapter and lifecycle bindings",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/core/issues/5",
+        "https://github.com/interactive-project/registry/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define host-owned versus adapter-owned runtime sessions, creation and disposal rules.",
+        "Resolve activity renderers independently from engines and expose loading/error/capability states.",
+        "Translate UI actions into the common dispatch contract without duplicating domain logic.",
+        "Specify behavior for reactivity ownership, repeated mount/unmount and SSR hydration.",
+        "Test two isolated activities, subscription cleanup and a renderer failure without corrupting engine state."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 55,
+      "repository": "interactive-project/svelte",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/svelte/issues/2",
+      "title": "Specify composable svelte renderers, rich content and accessible interactions",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/svelte/issues/1",
+        "https://github.com/interactive-project/renderer-dom/issues/2",
+        "https://github.com/interactive-project/content-node/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define renderer registration, slots/composition hooks and localized labels without enforcing a UI toolkit.",
+        "Reuse ContentNode driver semantics and host-controlled asset policies.",
+        "Require keyboard/focus/announcement parity with the DOM reference interaction contract.",
+        "Keep browser-only drivers out of server rendering and define a stable accessible initial/loading state.",
+        "Test custom visual components and missing optional drivers without changes to domain specs."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 56,
+      "repository": "interactive-project/svelte",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/svelte/issues/3",
+      "title": "Establish svelte compatibility, snapshot portability and release checks",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/svelte/issues/2",
+        "https://github.com/interactive-project/core/issues/4",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Run identical quiz and flashcard action traces against headless and framework hosts and compare state/events/results.",
+        "Restore a snapshot produced by another host and continue the same attempt without duplicate events.",
+        "Define supported framework and core/protocol version ranges and test their documented boundaries.",
+        "Verify clean import in supported SSR environments and no runtime framework dependency in domain libraries.",
+        "Specify package entry points, optional renderer dependencies and upgrade guidance for breaking adapter changes."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 57,
+      "repository": "interactive-project/collaboration",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/collaboration/issues/1",
+      "title": "Define shared document, presence and transport boundaries",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/protocol/issues/5",
+        "https://github.com/interactive-project/whiteboard/issues/2",
+        "https://github.com/interactive-project/diagram/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Distinguish durable shared documents, ephemeral awareness/presence and private learner/session state.",
+        "Define document/participant IDs, connection lifecycle, authentication integration and host authorization checks.",
+        "Specify a transport/provider interface supporting local, WebSocket or WebRTC implementations.",
+        "Define supported collaborative domain operations and capability declarations per activity type.",
+        "Document that CRDT convergence does not enforce authorization; validate incoming operations at the appropriate trust boundary."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 58,
+      "repository": "interactive-project/collaboration",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/collaboration/issues/2",
+      "title": "Specify the Yjs adapter and domain mapping strategy",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/collaboration/issues/1",
+        "https://github.com/interactive-project/whiteboard/issues/4",
+        "https://github.com/interactive-project/diagram/issues/3",
+        "https://github.com/interactive-project/code/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Define stable object identity and mapping for whiteboard objects, diagram graphs and code text.",
+        "Specify transaction origins, local echo suppression and event emission without duplicate user actions.",
+        "Define concurrent edit/delete, group changes and dangling-reference reconciliation policies.",
+        "Distinguish collaborative document history from local per-user undo/redo behavior.",
+        "Test concurrent edits on two replicas, disconnected editing and convergence after reconnection."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 59,
+      "repository": "interactive-project/collaboration",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/collaboration/issues/3",
+      "title": "Plan collaboration persistence, schema migration and reconnect behavior",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/collaboration/issues/2",
+        "https://github.com/interactive-project/protocol/issues/6",
+        "https://github.com/interactive-project/events/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Define persisted shared-document versions and protocol compatibility negotiation before joining.",
+        "Specify initial sync, disconnect/reconnect, duplicate updates and corrupt update handling.",
+        "Define a coordinated migration or read-only/rejection strategy for incompatible client versions.",
+        "Require authenticated access control and bounded update/presence payloads; never embed tokens in exported activity data.",
+        "Test convergence, retention limits, unauthorized edits and restore without leaking private attempts."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 60,
+      "repository": "interactive-project/spaced-repetition",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/spaced-repetition/issues/1",
+      "title": "Define a standalone review scheduling contract and data model",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/flashcards/issues/2",
+        "https://github.com/interactive-project/protocol/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Define item IDs, review IDs, timestamps, due times, ratings and versioned scheduler state.",
+        "Specify schedule/review/reset/query operations with an injected clock and explicit timestamp units.",
+        "Keep scheduler state separate from card content and domain activity snapshots.",
+        "Define deterministic handling of duplicate/out-of-order reviews and missing/deleted items.",
+        "Provide flashcard and non-flashcard integration fixtures using the same scheduling port."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 61,
+      "repository": "interactive-project/spaced-repetition",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/spaced-repetition/issues/2",
+      "title": "Specify algorithm drivers, deterministic scheduling and migration rules",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/spaced-repetition/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Record algorithm identifier/version, parameter configuration and required review history.",
+        "Specify rating mapping, initial/new-item handling and bounded interval calculations.",
+        "Define UTC storage and host-controlled local day boundaries including daylight-saving changes.",
+        "Require explicit migration or rescheduling when algorithm/configuration changes.",
+        "Test fixed clock sequences, extreme review intervals, duplicate ratings and exact reproducibility for a pinned algorithm."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 62,
+      "repository": "interactive-project/spaced-repetition",
+      "issue_number": 3,
+      "issue_url": "https://github.com/interactive-project/spaced-repetition/issues/3",
+      "title": "Plan flashcard integration, offline persistence and scheduler conformance",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/spaced-repetition/issues/2",
+        "https://github.com/interactive-project/flashcards/issues/3",
+        "https://github.com/interactive-project/core/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Connect committed flashcard review outcomes to scheduler updates through the documented port.",
+        "Define due-item ordering, session limits and behavior for no due items.",
+        "Persist scheduler state independently and reconcile offline reviews with idempotency keys.",
+        "Test shared decks across hosts while preserving user-specific review history.",
+        "Document compatibility with algorithm versions, privacy constraints and operation without collaboration or telemetry."
+      ],
+      "planned_branch": "codex/issue-3",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 63,
+      "repository": "interactive-project/layout-elk",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/layout-elk/issues/1",
+      "title": "Specify the ELK layout adapter and loss-aware graph conversion",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/diagram/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Map node/edge/port/group identities and dimensions to layout requests and preserve them in returned positions.",
+        "Define supported layout algorithms/options, units, defaults and unsupported-feature diagnostics.",
+        "Keep semantic graph content unchanged and make positioned output a separate artifact.",
+        "Run layout asynchronously with cancellation or stale-result suppression and resource limits.",
+        "Test nested groups, ports, disconnected nodes, cycles and empty graphs against diagram driver contracts."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 64,
+      "repository": "interactive-project/layout-elk",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/layout-elk/issues/2",
+      "title": "Plan ELK version compatibility, deterministic fixtures and runtime isolation",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/layout-elk/issues/1",
+        "https://github.com/interactive-project/protocol/issues/6"
+      ],
+      "acceptance_criteria": [
+        "Specify worker/headless entry points and avoid importing UI frameworks.",
+        "Pin expected behavior to documented driver/ELK versions; compare coordinates using declared tolerances where necessary.",
+        "Test concurrent requests, graph edits during layout and disposal while a request is pending.",
+        "Verify conversion does not lose application attributes or mutate caller-owned graph data.",
+        "Define compatibility/release checks against the supported diagram and protocol versions."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 65,
+      "repository": "interactive-project/graph-cytoscape",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/graph-cytoscape/issues/1",
+      "title": "Specify optional headless Cytoscape graph-analysis drivers",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/diagram/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Define supported analysis operations and input/output schemas, beginning with reachability and path queries.",
+        "Preserve graph IDs and explicitly handle directed edges, weights, ports, groups and multigraph limitations.",
+        "Reject unsupported semantics rather than silently flattening or losing graph information.",
+        "Support headless operation and prevent analysis calls from changing the source diagram.",
+        "Test algorithm fixtures and conversion round trips without React or a browser document."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 66,
+      "repository": "interactive-project/graph-cytoscape",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/graph-cytoscape/issues/2",
+      "title": "Plan graph driver conformance, performance limits and extension compatibility",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/graph-cytoscape/issues/1",
+        "https://github.com/interactive-project/layout-elk/issues/1"
+      ],
+      "acceptance_criteria": [
+        "Run both analysis and ELK layout on the same semantic fixture and compare preserved IDs/attributes.",
+        "Specify graph-size limits, cancellation strategy and error reporting for expensive computations.",
+        "Keep any Cytoscape extensions optional and declare their supported version ranges.",
+        "Test empty/disconnected graphs, unsupported algorithms, resource cleanup and repeated use.",
+        "Document result determinism, numeric tolerances and compatibility with diagram/protocol releases."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 67,
+      "repository": "interactive-project/simulation-matter",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/simulation-matter/issues/1",
+      "title": "Define the Matter.js 2D physics driver and portable model mapping",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation/issues/2",
+        "https://github.com/interactive-project/simulation/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Map portable rigid bodies, constraints, materials, gravity and inputs with explicit coordinate/physical unit conversions.",
+        "Declare supported shapes/features and reject unsupported dimensions or model properties.",
+        "Use core-owned stepping and seeded initialization where supported; do not run an independent render loop.",
+        "Map collisions and observations to bounded domain output, keeping renderer choice independent.",
+        "Test gravity, collisions, constraints, pause/reset and disposal against simulation contract fixtures."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 68,
+      "repository": "interactive-project/simulation-matter",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/simulation-matter/issues/2",
+      "title": "Specify Matter snapshot guarantees and physics conformance scenarios",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation-matter/issues/1",
+        "https://github.com/interactive-project/simulation/issues/4"
+      ],
+      "acceptance_criteria": [
+        "Record driver/version metadata and preserve all state needed for the declared resume guarantee.",
+        "Define numeric tolerances and avoid unqualified claims of cross-platform determinism.",
+        "Reject incompatible snapshots and explain any lossy reconstruction limitations.",
+        "Test replay/reset, snapshot resume, delayed inputs and invalid/non-finite state.",
+        "Verify operation without Konva, React or a bundled renderer and publish a supported feature matrix."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 69,
+      "repository": "interactive-project/simulation-rapier",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/simulation-rapier/issues/1",
+      "title": "Define optional Rapier 2D/3D drivers and asynchronous WASM initialization",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation/issues/1",
+        "https://github.com/interactive-project/simulation/issues/2",
+        "https://github.com/interactive-project/protocol/issues/5"
+      ],
+      "acceptance_criteria": [
+        "Define dimension-specific model mappings, coordinate conventions, units and supported body/collider/constraint features.",
+        "Load only the requested dimension and report WASM loading, initialization and capability failures.",
+        "Require host-controlled asset resolution and offline availability declarations.",
+        "Specify deterministic stepping inputs, cancellation during initialization and cleanup of WASM resources.",
+        "Test 2D/3D capability mismatch, concurrent initialization and reset/dispose behavior."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 70,
+      "repository": "interactive-project/simulation-rapier",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/simulation-rapier/issues/2",
+      "title": "Specify Rapier snapshot compatibility and driver conformance tests",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation-rapier/issues/1",
+        "https://github.com/interactive-project/simulation/issues/4",
+        "https://github.com/interactive-project/simulation-matter/issues/2"
+      ],
+      "acceptance_criteria": [
+        "Tag snapshots with driver, version, dimension and encoding; define native versus portable portions.",
+        "Reject incompatible Matter/custom/other-dimension snapshots unless an explicit migration exists.",
+        "Test fixed-step traces, numerical tolerances, restore/reset and memory cleanup.",
+        "Compare equivalent portable model features with Matter without requiring identical physical trajectories.",
+        "Document supported browser/headless environments and offline WASM packaging assumptions to verify at implementation."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 71,
+      "repository": "interactive-project/simulation-custom",
+      "issue_number": 1,
+      "issue_url": "https://github.com/interactive-project/simulation-custom/issues/1",
+      "title": "Define the reference custom simulation driver and authoring contract",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation/issues/1",
+        "https://github.com/interactive-project/simulation/issues/2",
+        "https://github.com/interactive-project/protocol/issues/5"
+      ],
+      "acceptance_criteria": [
+        "Specify a serializable model, state and input set with explicit bounds and units.",
+        "Implement the planned initialize/step/input/reset/dispose and snapshot contracts without a UI dependency.",
+        "Use injected randomness/clock and declare only capabilities the driver satisfies.",
+        "Provide author guidance for custom chemistry/economics/statistics/network model integrations.",
+        "Clarify that generated JSON selects registered trusted drivers and does not supply executable JavaScript."
+      ],
+      "planned_branch": "codex/issue-1",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    },
+    {
+      "order": 72,
+      "repository": "interactive-project/simulation-custom",
+      "issue_number": 2,
+      "issue_url": "https://github.com/interactive-project/simulation-custom/issues/2",
+      "title": "Create the reference simulation conformance and host portability plan",
+      "priority": "P1",
+      "dependencies": [
+        "https://github.com/interactive-project/simulation-custom/issues/1",
+        "https://github.com/interactive-project/simulation/issues/4",
+        "https://github.com/interactive-project/registry/issues/3"
+      ],
+      "acceptance_criteria": [
+        "Define golden action traces with expected state, observations and lifecycle events.",
+        "Test snapshot round trips, invalid input, time limits, reset and disposal.",
+        "Run the same trace headlessly and through DOM/framework host adapters.",
+        "Document evaluator hooks and differences between a sandbox and an assessed experiment.",
+        "Provide a checklist for publishing a driver with schemas, capabilities, compatibility ranges and migration behavior."
+      ],
+      "planned_branch": "codex/issue-2",
+      "execution_status": "queued",
+      "session_id": null,
+      "commits": [],
+      "verification": []
+    }
+  ]
+}
