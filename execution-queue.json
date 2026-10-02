@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/whiteboard/issues/2"
+    "resume_from": "https://github.com/interactive-project/simulation/issues/1"
   },
   "issues": [
     {
@@ -1220,15 +1220,44 @@
         "Test repeated actions, interrupted gestures, batch rollback and stable IDs after undo/redo."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
-        "344603ee6188ab770fc5d86b07fcc1099b3425d7"
+        "344603ee6188ab770fc5d86b07fcc1099b3425d7",
+        "1ef080544529facfb67ec95136957db34d1116cf",
+        "9d07391a214090adbf66b1a43a82aa17a25d6494"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "9d07391a214090adbf66b1a43a82aa17a25d6494",
+          "url": "https://github.com/interactive-project/whiteboard/actions/runs/37013119065",
+          "checks": [
+            "Actual Core atomic edits and transaction rollback",
+            "Undo/redo stable IDs, groups and connectors",
+            "Interrupted host gestures, drawing/history bounds and shear rejection",
+            "Document regression and headless TypeScript consumer"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "9d07391a214090adbf66b1a43a82aa17a25d6494",
+          "url": "https://github.com/interactive-project/whiteboard/actions/runs/37013124398",
+          "checks": [
+            "Actual Core atomic edits and transaction rollback",
+            "Undo/redo stable IDs, groups and connectors",
+            "Interrupted host gestures, drawing/history bounds and shear rejection",
+            "Document regression and headless TypeScript consumer"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-2",
       "pull_request": "https://github.com/interactive-project/whiteboard/pull/6",
-      "compatibility": "decisions/whiteboard-editing-v1.md"
+      "compatibility": "decisions/whiteboard-editing-v1.md",
+      "issue_state": "closed",
+      "merge_commit": "40b66e8d6582e74a20fdbc6da42e794ba7644bf0"
     },
     {
       "order": 26,
