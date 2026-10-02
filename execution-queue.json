@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/quiz/issues/1"
+    "resume_from": "https://github.com/interactive-project/quiz/issues/2"
   },
   "issues": [
     {
@@ -688,14 +688,37 @@
         "Provide at least one valid, invalid and localized fixture for every initial question type."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
-        "916c999192b8d8f4e974518e159e1bd6b45e62b4"
+        "916c999192b8d8f4e974518e159e1bd6b45e62b4",
+        "439a242af5eb60dfa69ffb6f748964ae19dc4558"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "439a242af5eb60dfa69ffb6f748964ae19dc4558",
+          "url": "https://github.com/interactive-project/quiz/actions/runs/37002042742",
+          "checks": [
+            "Quiz conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "439a242af5eb60dfa69ffb6f748964ae19dc4558",
+          "url": "https://github.com/interactive-project/quiz/actions/runs/37002038595",
+          "checks": [
+            "Quiz conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-1",
-      "pull_request": "https://github.com/interactive-project/quiz/pull/5"
+      "pull_request": "https://github.com/interactive-project/quiz/pull/5",
+      "issue_state": "closed",
+      "merge_commit": "1844c1008eb15cf480bc945a965ff469fe0bd8e7",
+      "compatibility": "decisions/quiz-models-v1.md"
     },
     {
       "order": 16,
