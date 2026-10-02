@@ -26,7 +26,7 @@
     "paused": true,
     "paused_on": "2026-10-02",
     "pause_reason": "User requested stopping after events #1 PR merge and closure.",
-    "resume_from": "https://github.com/interactive-project/registry/issues/1"
+    "resume_from": "https://github.com/interactive-project/registry/issues/2"
   },
   "issues": [
     {
@@ -404,10 +404,31 @@
         "Test one quiz engine resolved by React, Vue, Svelte and DOM registrations without loading those frameworks into the engine."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "19112ad4994c50673bdf181764f82430d50dc987"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "19112ad4994c50673bdf181764f82430d50dc987",
+          "url": "https://github.com/interactive-project/registry/actions/runs/36996278199",
+          "checks": [
+            "manifest validation and bounded registration",
+            "one fixture quiz engine/four independent host registrations",
+            "duplicate/conflict/explicit replacement",
+            "retained sessions and disposal",
+            "ES2022-only TypeScript"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-1",
+      "merge_commit": "822f99b3dedaf1792442a1ac087e8c268d6ba59c",
+      "pull_request": "https://github.com/interactive-project/registry/pull/4",
+      "issue_state": "closed",
+      "compatibility": "One-way Protocol dependency; unchanged wire schemas. Host-port fixtures do not assert production framework/domain release. Decision: decisions/registry-registration-v1.md."
     },
     {
       "order": 10,
