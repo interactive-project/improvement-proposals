@@ -637,10 +637,15 @@
         "Test quiz and flashcard round trips, cross-host restore and unsupported simulation-driver snapshot versions."
       ],
       "planned_branch": "codex/issue-4",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "e3b02def9e6ab3bc73f5904fb5027d4bdad1b381",
+        "41b65836eae5d4addf6ba130df52ec98aef91ade"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-4",
+      "pull_request": "https://github.com/interactive-project/core/pull/9"
     },
     {
       "order": 15,
