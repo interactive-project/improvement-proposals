@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/core/issues/4"
+    "resume_from": "https://github.com/interactive-project/quiz/issues/1"
   },
   "issues": [
     {
@@ -637,15 +637,37 @@
         "Test quiz and flashcard round trips, cross-host restore and unsupported simulation-driver snapshot versions."
       ],
       "planned_branch": "codex/issue-4",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "e3b02def9e6ab3bc73f5904fb5027d4bdad1b381",
         "41b65836eae5d4addf6ba130df52ec98aef91ade"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "41b65836eae5d4addf6ba130df52ec98aef91ade",
+          "url": "https://github.com/interactive-project/core/actions/runs/37001301258",
+          "checks": [
+            "Core conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "41b65836eae5d4addf6ba130df52ec98aef91ade",
+          "url": "https://github.com/interactive-project/core/actions/runs/37001306106",
+          "checks": [
+            "Core conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-4",
-      "pull_request": "https://github.com/interactive-project/core/pull/9"
+      "pull_request": "https://github.com/interactive-project/core/pull/9",
+      "issue_state": "closed",
+      "merge_commit": "f4923be1fe252904d48ed7ea60061848b2a8c429",
+      "compatibility": "decisions/core-persistence-v1.md"
     },
     {
       "order": 15,
