@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/flashcards/issues/1"
+    "resume_from": "https://github.com/interactive-project/flashcards/issues/2"
   },
   "issues": [
     {
@@ -841,14 +841,36 @@
         "Test multilingual rich-content cards, repeated reveal and out-of-range navigation."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "87131dffa302b14f023de1f78c2d830d889421d2"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "87131dffa302b14f023de1f78c2d830d889421d2",
+          "url": "https://github.com/interactive-project/flashcards/actions/runs/37004663067",
+          "checks": [
+            "Flashcard conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "87131dffa302b14f023de1f78c2d830d889421d2",
+          "url": "https://github.com/interactive-project/flashcards/actions/runs/37004662349",
+          "checks": [
+            "Flashcard conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-1",
-      "pull_request": "https://github.com/interactive-project/flashcards/pull/4"
+      "pull_request": "https://github.com/interactive-project/flashcards/pull/4",
+      "issue_state": "closed",
+      "merge_commit": "1f9044c1e2898219abfe4976fea2267708b7267f",
+      "compatibility": "decisions/flashcards-study-v1.md"
     },
     {
       "order": 19,
