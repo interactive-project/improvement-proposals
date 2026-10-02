@@ -892,10 +892,14 @@
         "Test study completion, interrupted review, disabled telemetry and privacy filtering."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "5c3b5bb252cc99e6b8c2a511b321339adf784717"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-2",
+      "pull_request": "https://github.com/interactive-project/flashcards/pull/5"
     },
     {
       "order": 20,
