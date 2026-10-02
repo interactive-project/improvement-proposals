@@ -26,7 +26,7 @@
     "paused": true,
     "paused_on": "2026-10-02",
     "pause_reason": "User requested stopping after events #1 PR merge and closure.",
-    "resume_from": "https://github.com/interactive-project/core/issues/1"
+    "resume_from": "https://github.com/interactive-project/core/issues/2"
   },
   "issues": [
     {
@@ -495,10 +495,32 @@
         "Test lifecycle parity using a quiz engine and a minimal custom engine, including repeated disposal and cancellation."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "ee819c918476747f30b5a512f651739be4383390",
+        "4bbfe2ae385940031de5465c2047e1c4649fd461"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "4bbfe2ae385940031de5465c2047e1c4649fd461",
+          "url": "https://github.com/interactive-project/core/actions/runs/36998279624",
+          "checks": [
+            "quiz reducer/custom-machine lifecycle parity",
+            "immutable atomic invalid/throwing/cancelled candidates",
+            "observer/completion/reentrancy isolation",
+            "injected deterministic sources and repeated cleanup",
+            "Registry/Protocol session compatibility and ES2022 types"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-1",
+      "merge_commit": "6b0041722bd261b93307d698ea944b3352ac4fae",
+      "pull_request": "https://github.com/interactive-project/core/pull/6",
+      "issue_state": "closed",
+      "compatibility": "Synchronous lifecycle only; existing wire schemas unchanged. Ordered load/async effects/snapshots are #2/#3/#4; no production XState/domain/browser/npm release asserted. Decision: decisions/core-lifecycle-v1.md."
     },
     {
       "order": 12,
