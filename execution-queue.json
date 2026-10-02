@@ -22,7 +22,11 @@
       "branch": "main",
       "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
     },
-    "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next."
+    "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
+    "paused": true,
+    "paused_on": "2026-10-02",
+    "pause_reason": "User requested stopping after events #1 PR merge and closure.",
+    "resume_from": "https://github.com/interactive-project/events/issues/2"
   },
   "issues": [
     {
@@ -313,10 +317,33 @@
         "Provide valid/invalid fixtures and an event version evolution policy."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "50dacf6f64f1d657376706b92d5dd2daaf137161",
+        "17baaa9f07f1cfeae257dc48df24fcac69ccf470",
+        "8df6cfb72f3f16acf0c74980ff6d1487df20e420"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "8df6cfb72f3f16acf0c74980ff6d1487df20e420",
+          "url": "https://github.com/interactive-project/events/actions/runs/36967405191",
+          "checks": [
+            "33 JS/Python fixtures",
+            "19 typed lifecycle/domain catalog entries",
+            "exact Protocol identity/result alignment",
+            "ES2022-only TypeScript and schema consistency",
+            "causation, extension preservation and input bounds"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-1",
+      "merge_commit": "c72c29fb37e4510bf699db4c428787e426c72dad",
+      "pull_request": "https://github.com/interactive-project/events/pull/4",
+      "issue_state": "closed",
+      "compatibility": "Protocol 1.0.0 one-way dependency; no existing wire changes. Delivery/telemetry remain #2/#3. Decision: decisions/events-v1.md."
     },
     {
       "order": 8,
