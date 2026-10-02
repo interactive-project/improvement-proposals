@@ -86,10 +86,31 @@
         "Provide nested quiz, flashcard and whiteboard examples that reuse identical content and localization contracts."
       ],
       "planned_branch": "codex/issue-3",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "8c811928b9871995ceceefb172ace3eea65092d3"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "8c811928b9871995ceceefb172ace3eea65092d3",
+          "url": "https://github.com/interactive-project/protocol/actions/runs/36961758088",
+          "checks": [
+            "34 existing cross-language fixtures",
+            "14 shared-content structural/semantic fixtures",
+            "locale fallback and RTL metadata",
+            "nested domain envelope round trips",
+            "shared schema/type and package import consistency"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-3",
+      "merge_commit": "daf2f2a60b174f78ce0eae2f6ee05be8d63fcb06",
+      "pull_request": "https://github.com/interactive-project/protocol/pull/8",
+      "issue_state": "closed",
+      "compatibility": "Optional separately versioned shared content contract. ActivitySpec v1 and validation-result v1 unchanged. Decision: decisions/protocol-shared-content-v1.md."
     },
     {
       "order": 3,
