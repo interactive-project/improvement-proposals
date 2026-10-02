@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/whiteboard/issues/1"
+    "resume_from": "https://github.com/interactive-project/whiteboard/issues/2"
   },
   "issues": [
     {
@@ -1163,15 +1163,43 @@
         "Provide semantic fixtures for a teaching board with text, formulas, diagrams and a nested quiz."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
-        "4fdef89220e604b1bac6406a2ce429eb2808203a"
+        "4fdef89220e604b1bac6406a2ce429eb2808203a",
+        "55d7afa1b50dcc3552cdc65d6060701c42daf33c"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "55d7afa1b50dcc3552cdc65d6060701c42daf33c",
+          "url": "https://github.com/interactive-project/whiteboard/actions/runs/37012273271",
+          "checks": [
+            "Teaching board rich content, formulas, assets, diagrams and nested learner quiz",
+            "Geometry/matrix composition and overflow limits",
+            "Connector/group/content/duplicate/ephemeral rejection",
+            "Frozen portable JSON and headless TypeScript consumer"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "55d7afa1b50dcc3552cdc65d6060701c42daf33c",
+          "url": "https://github.com/interactive-project/whiteboard/actions/runs/37012279983",
+          "checks": [
+            "Teaching board rich content, formulas, assets, diagrams and nested learner quiz",
+            "Geometry/matrix composition and overflow limits",
+            "Connector/group/content/duplicate/ephemeral rejection",
+            "Frozen portable JSON and headless TypeScript consumer"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-1",
       "pull_request": "https://github.com/interactive-project/whiteboard/pull/5",
-      "compatibility": "decisions/whiteboard-document-v1.md"
+      "compatibility": "decisions/whiteboard-document-v1.md",
+      "issue_state": "closed",
+      "merge_commit": "08b6f16e6b7b41752eade437ad01e32bfd19b17a"
     },
     {
       "order": 25,
