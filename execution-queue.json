@@ -176,10 +176,32 @@
         "Provide acceptance/rejection fixtures for unknown types, missing drivers, unsupported versions, prohibited execution and oversized generated input."
       ],
       "planned_branch": "codex/issue-5",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "148a7bd845de8caa92cca342008e2a805e0fc8e8",
+        "6130274b7e0a3b1acc3906ec17fb20cd8952f626"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "6130274b7e0a3b1acc3906ec17fb20cd8952f626",
+          "url": "https://github.com/interactive-project/protocol/actions/runs/36965707241",
+          "checks": [
+            "eleven generation pipeline fixtures",
+            "bounded strict JSON parser and descriptor-based copy",
+            "host permissions and driver capabilities",
+            "TypeScript headless consumers",
+            "independent Python catalog fixtures"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-5",
+      "merge_commit": "8b616d16027ce242edc5286fde654bba85131d47",
+      "pull_request": "https://github.com/interactive-project/protocol/pull/10",
+      "issue_state": "closed",
+      "compatibility": "Optional generation adapter; existing wire schemas unchanged. Production catalog empty pending domain releases. Decision: decisions/protocol-generation-v1.md."
     },
     {
       "order": 5,
