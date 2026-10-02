@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/quiz/issues/3"
+    "resume_from": "https://github.com/interactive-project/flashcards/issues/1"
   },
   "issues": [
     {
@@ -790,15 +790,37 @@
         "Test resuming a partially completed attempt, double submission and late evaluation results."
       ],
       "planned_branch": "codex/issue-3",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "53cab09891c24260843e5a448d79c15e10f0e380",
         "c3533d83e20111069c95f5d26498917bc0ea442b"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "c3533d83e20111069c95f5d26498917bc0ea442b",
+          "url": "https://github.com/interactive-project/quiz/actions/runs/37003994168",
+          "checks": [
+            "Quiz conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "c3533d83e20111069c95f5d26498917bc0ea442b",
+          "url": "https://github.com/interactive-project/quiz/actions/runs/37003990309",
+          "checks": [
+            "Quiz conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-3",
-      "pull_request": "https://github.com/interactive-project/quiz/pull/7"
+      "pull_request": "https://github.com/interactive-project/quiz/pull/7",
+      "issue_state": "closed",
+      "merge_commit": "e6d2cfd041d518d9eca6bb1270db19fd3619cb8b",
+      "compatibility": "decisions/quiz-attempts-v1.md"
     },
     {
       "order": 18,
