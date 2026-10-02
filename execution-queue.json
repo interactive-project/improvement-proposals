@@ -739,10 +739,14 @@
         "Test boundary values, repeated evaluation idempotency, unanswered questions and equivalent local/remote result envelopes."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "fa2c6bc1902d7c14ae10dcfaadf53a9b43692692"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-2",
+      "pull_request": "https://github.com/interactive-project/quiz/pull/6"
     },
     {
       "order": 17,
