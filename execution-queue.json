@@ -841,10 +841,14 @@
         "Test multilingual rich-content cards, repeated reveal and out-of-range navigation."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "87131dffa302b14f023de1f78c2d830d889421d2"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-1",
+      "pull_request": "https://github.com/interactive-project/flashcards/pull/4"
     },
     {
       "order": 19,
