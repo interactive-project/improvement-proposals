@@ -688,10 +688,14 @@
         "Provide at least one valid, invalid and localized fixture for every initial question type."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "916c999192b8d8f4e974518e159e1bd6b45e62b4"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-1",
+      "pull_request": "https://github.com/interactive-project/quiz/pull/5"
     },
     {
       "order": 16,
