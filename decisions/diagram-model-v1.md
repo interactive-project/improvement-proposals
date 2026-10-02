@@ -1,0 +1,3 @@
+# Diagram model v1 compatibility
+
+Optional domain-owned DiagramConfig schema and Core StatePorts; no shared Protocol/ContentNode/Event schema changes. Stable global entity IDs, ContentNode labels, scalar typed attributes, directed/undirected typed ports and acyclic groups define semantics. Coordinates and layout hints remain separate optional view data and do not enter the headless graph state. Atomic final-graph validation and explicit reject/cascade deletion policy govern mutations. Evaluation/rendering/layout/history/collaboration are subsequent gates. Full contract and bounds: diagram/docs/model-v1.md.
