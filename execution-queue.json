@@ -26,7 +26,7 @@
     "paused": true,
     "paused_on": "2026-10-02",
     "pause_reason": "User requested stopping after events #1 PR merge and closure.",
-    "resume_from": "https://github.com/interactive-project/core/issues/2"
+    "resume_from": "https://github.com/interactive-project/core/issues/3"
   },
   "issues": [
     {
@@ -542,10 +542,31 @@
         "Test malformed quiz input, unknown activity versions, missing drivers and host-rejected execution permissions."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "4c7bb8091f4ab32637cc370742824a74f22e65e0"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "4c7bb8091f4ab32637cc370742824a74f22e65e0",
+          "url": "https://github.com/interactive-project/core/actions/runs/36999021274",
+          "checks": [
+            "ordered structural/semantic/permission/capability gates",
+            "exact catalog/Registry engine/renderer matching",
+            "safe failures and policy capture",
+            "cancellation/timeout/partial/late cleanup",
+            "lifecycle regression and ES2022 types"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-2",
+      "merge_commit": "2660a128a5df0fc9a1fa120c7a1b6a1c7cc72605",
+      "pull_request": "https://github.com/interactive-project/core/pull/7",
+      "issue_state": "closed",
+      "compatibility": "Optional Node loading entry; existing wire schemas unchanged. Authored/generated modes explicit; host cooperative factory/cleanup ownership. Decision: decisions/core-loading-v1.md."
     },
     {
       "order": 13,
