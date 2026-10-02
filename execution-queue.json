@@ -23,10 +23,10 @@
       "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
-    "paused": false,
-    "resume_from": "https://github.com/interactive-project/simulation/issues/1",
+    "paused": true,
+    "resume_from": "https://github.com/interactive-project/simulation/issues/2",
     "pause_after": "https://github.com/interactive-project/simulation/issues/1",
-    "pause_reason": "User requested simulation#1 to be the last issue for now; finish PR/merge/closure before pausing."
+    "pause_reason": "Paused at user request after simulation#1 PR merge, exact final-head CI and verified issue closure."
   },
   "issues": [
     {
@@ -1281,15 +1281,44 @@
         "Provide a minimal deterministic custom-model fixture and a physics-oriented fixture."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
-        "fd312596589f442468978f31554bf68e5751e9c4"
+        "fd312596589f442468978f31554bf68e5751e9c4",
+        "3258fa23460cfb4762aeb1c9f785760dd8485753",
+        "1cfd3dc858892124215e4300e7bd9d75b8779475"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "1cfd3dc858892124215e4300e7bd9d75b8779475",
+          "url": "https://github.com/interactive-project/simulation/actions/runs/37014421970",
+          "checks": [
+            "Deterministic counter and analytic physics fixtures",
+            "Exact version/dimension/unit/capability/permission negotiation",
+            "Initialization/step/reset failure, deadline/cancellation and late cleanup",
+            "Portable projected state and headless TypeScript consumer"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "1cfd3dc858892124215e4300e7bd9d75b8779475",
+          "url": "https://github.com/interactive-project/simulation/actions/runs/37014427560",
+          "checks": [
+            "Deterministic counter and analytic physics fixtures",
+            "Exact version/dimension/unit/capability/permission negotiation",
+            "Initialization/step/reset failure, deadline/cancellation and late cleanup",
+            "Portable projected state and headless TypeScript consumer"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-1",
       "pull_request": "https://github.com/interactive-project/simulation/pull/5",
-      "compatibility": "decisions/simulation-drivers-v1.md"
+      "compatibility": "decisions/simulation-drivers-v1.md",
+      "issue_state": "closed",
+      "merge_commit": "2b297df844bc0bd198ef3db19c2dd3d91046fdf7"
     },
     {
       "order": 27,
