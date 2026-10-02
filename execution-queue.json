@@ -268,10 +268,31 @@
         "Use protocol extension points without requiring protocol to import this package."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "ece036b5f373cf7eb975b9db702100e2af444684"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "ece036b5f373cf7eb975b9db702100e2af444684",
+          "url": "https://github.com/interactive-project/content-node/actions/runs/36966740472",
+          "checks": [
+            "18 JS/Python conformance fixtures",
+            "schema/TypeScript consistency and ES2022-only consumer",
+            "normalization idempotence/nonmutation",
+            "composition/string/byte boundaries",
+            "shared ActivitySpec embeddings"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-1",
+      "merge_commit": "276f7970a703035eab6130784046584f51df0534",
+      "pull_request": "https://github.com/interactive-project/content-node/pull/4",
+      "issue_state": "closed",
+      "compatibility": "Protocol 1.0.0 one-way dependency; no existing wire changes. Rendering/host behavior remains #2/#3. Decision: decisions/content-node-v1.md."
     },
     {
       "order": 7,
