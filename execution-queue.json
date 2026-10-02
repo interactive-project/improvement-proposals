@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/code/issues/2"
+    "resume_from": "https://github.com/interactive-project/code/issues/3"
   },
   "issues": [
     {
@@ -994,16 +994,41 @@
         "Test forbidden network/filesystem requests, infinite execution, excessive output and stale run responses."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "9e7a0efea19b3c2ff194d2aa2046181ab921c683",
         "b8654b6530c3cea57c354515af748d64c22bbee7"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "b8654b6530c3cea57c354515af748d64c22bbee7",
+          "url": "https://github.com/interactive-project/code/actions/runs/37009732704",
+          "checks": [
+            "Code model/editor/execution conformance",
+            "TypeScript consumers",
+            "Real Docker filesystem/network/output/deadline/child cleanup"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "b8654b6530c3cea57c354515af748d64c22bbee7",
+          "url": "https://github.com/interactive-project/code/actions/runs/37009736286",
+          "checks": [
+            "Code model/editor/execution conformance",
+            "TypeScript consumers",
+            "Real Docker filesystem/network/output/deadline/child cleanup"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-2",
       "pull_request": "https://github.com/interactive-project/code/pull/6",
-      "compatibility": "decisions/code-execution-v1.md"
+      "compatibility": "decisions/code-execution-v1.md",
+      "issue_state": "closed",
+      "merge_commit": "c7d8e358ff075810012052e20614e6585fe82b78"
     },
     {
       "order": 22,
