@@ -24,7 +24,9 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/simulation/issues/1"
+    "resume_from": "https://github.com/interactive-project/simulation/issues/1",
+    "pause_after": "https://github.com/interactive-project/simulation/issues/1",
+    "pause_reason": "User requested simulation#1 to be the last issue for now; finish PR/merge/closure before pausing."
   },
   "issues": [
     {
@@ -1279,10 +1281,15 @@
         "Provide a minimal deterministic custom-model fixture and a physics-oriented fixture."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "fd312596589f442468978f31554bf68e5751e9c4"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-1",
+      "pull_request": "https://github.com/interactive-project/simulation/pull/5",
+      "compatibility": "decisions/simulation-drivers-v1.md"
     },
     {
       "order": 27,
