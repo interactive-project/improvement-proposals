@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/quiz/issues/2"
+    "resume_from": "https://github.com/interactive-project/quiz/issues/3"
   },
   "issues": [
     {
@@ -739,14 +739,36 @@
         "Test boundary values, repeated evaluation idempotency, unanswered questions and equivalent local/remote result envelopes."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
         "fa2c6bc1902d7c14ae10dcfaadf53a9b43692692"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "fa2c6bc1902d7c14ae10dcfaadf53a9b43692692",
+          "url": "https://github.com/interactive-project/quiz/actions/runs/37002662692",
+          "checks": [
+            "Quiz conformance"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "fa2c6bc1902d7c14ae10dcfaadf53a9b43692692",
+          "url": "https://github.com/interactive-project/quiz/actions/runs/37002665817",
+          "checks": [
+            "Quiz conformance"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-2",
-      "pull_request": "https://github.com/interactive-project/quiz/pull/6"
+      "pull_request": "https://github.com/interactive-project/quiz/pull/6",
+      "issue_state": "closed",
+      "merge_commit": "68ea1c66b1b281591c5f8eab29c505f819ada0aa",
+      "compatibility": "decisions/quiz-evaluation-v1.md"
     },
     {
       "order": 17,
