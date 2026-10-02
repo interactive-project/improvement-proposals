@@ -16,12 +16,13 @@
     "requested": "A separate Codex session for each issue, followed by verified commits and upload.",
     "session_creation_available": false,
     "runtime_available": false,
-    "note": "Records are execution handoffs. They do not assert that any Codex session, issue branch, implementation, test, commit or upload has started.",
+    "note": "session_id remains null because independent Codex conversation creation is unavailable. execution_status, commits and verification record actual work.",
     "route_publication": {
       "repository": "interactive-project/improvement-proposals",
       "branch": "main",
       "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
-    }
+    },
+    "mode": "Sequential implementation in this conversation, issue branches and GitHub Actions verification."
   },
   "issues": [
     {
@@ -42,10 +43,27 @@
         "Specify optional generated TypeScript types and Zod integration as projections of the public contract, including handling of constraints that cannot be represented faithfully."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "implemented_verified",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "efadb1fb2eb380564f551c6847354cb0f48c3176"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "efadb1fb2eb380564f551c6847354cb0f48c3176",
+          "url": "https://github.com/interactive-project/protocol/actions/runs/36960780821",
+          "checks": [
+            "34 cross-language fixtures",
+            "runtime JSON limits",
+            "portable diagnostics schema and types",
+            "NodeNext package consumer types"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-2",
+      "compatibility": "No authored wire schema or diagnostic catalog changed. Added optional TypeScript declarations; Core and host compatibility awaits consumer implementations."
     },
     {
       "order": 2,
