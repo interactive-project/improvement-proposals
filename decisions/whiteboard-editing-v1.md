@@ -1,0 +1,3 @@
+# Whiteboard editing v1 compatibility
+
+Optional Core StatePorts and ephemeral gesture helper; authored BoardDocument and shared Protocol/Event schemas stay unchanged. Atomic document transactions use bounded pure-JSON undo/redo stacks; a transaction is one history group. Explicit cascade/reject policies govern connector and nested group deletion. Grouping preserves local geometry; ungroup composes transforms and rejects unrepresentable shear. Selection/viewport/presence and gesture previews remain host-scoped. Collaborative undo, snapshot adapters and rendering are later gates. Full action/history/gesture semantics: whiteboard/docs/editing-v1.md.
