@@ -943,10 +943,14 @@
         "Test replacing editors without changing the activity spec or persisted learner files."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "b5d697aae4c37278ee8eebbaf657c3a21ee12e28"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-1",
+      "pull_request": "https://github.com/interactive-project/code/pull/5"
     },
     {
       "order": 21,
