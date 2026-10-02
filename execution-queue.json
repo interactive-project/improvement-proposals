@@ -26,7 +26,7 @@
     "paused": true,
     "paused_on": "2026-10-02",
     "pause_reason": "User requested stopping after events #1 PR merge and closure.",
-    "resume_from": "https://github.com/interactive-project/registry/issues/2"
+    "resume_from": "https://github.com/interactive-project/core/issues/1"
   },
   "issues": [
     {
@@ -449,10 +449,31 @@
         "Test unsupported versions, missing renderer, unavailable WASM driver and offline-only capability queries."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "9b0b9b7a9386c949452085de304906fbf295d478"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "9b0b9b7a9386c949452085de304906fbf295d478",
+          "url": "https://github.com/interactive-project/registry/actions/runs/36997025279",
+          "checks": [
+            "exact/range selection with no implicit major upgrade",
+            "permission/capability/missing-WASM/offline/renderer queries",
+            "loader dedup/cache/per-waiter cancellation",
+            "timeout/retry/cycle/depth/transitive conflict",
+            "existing registration and headless types"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-2",
+      "merge_commit": "872c1ab6350494113e3dca16f70da60dce6e15eb",
+      "pull_request": "https://github.com/interactive-project/registry/pull/5",
+      "issue_state": "closed",
+      "compatibility": "Optional live resolution/loader APIs; manifests and Protocol wire schemas unchanged. Trusted host cooperative import behavior; actual runtime integrations remain subsequent gates. Decision: decisions/registry-resolution-v1.md."
     },
     {
       "order": 11,
