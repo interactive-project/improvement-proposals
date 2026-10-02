@@ -1220,10 +1220,15 @@
         "Test repeated actions, interrupted gestures, batch rollback and stable IDs after undo/redo."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "in_progress",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "344603ee6188ab770fc5d86b07fcc1099b3425d7"
+      ],
+      "verification": [],
+      "actual_branch": "codex/issue-2",
+      "pull_request": "https://github.com/interactive-project/whiteboard/pull/6",
+      "compatibility": "decisions/whiteboard-editing-v1.md"
     },
     {
       "order": 26,
