@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/code/issues/3"
+    "resume_from": "https://github.com/interactive-project/diagram/issues/1"
   },
   "issues": [
     {
@@ -1049,15 +1049,44 @@
         "Test deterministic grading fixtures, partial credit, redacted feedback and retries without double counting."
       ],
       "planned_branch": "codex/issue-3",
-      "execution_status": "in_progress",
+      "execution_status": "completed",
       "session_id": null,
       "commits": [
-        "fae81ae1b867b5ee467ac310dac8b653413d2e5a"
+        "fae81ae1b867b5ee467ac310dac8b653413d2e5a",
+        "1034924cc8358d77055ce82cb4973735b5866f0c",
+        "d327e0494647fbe03a4939a6d940fb7ccd7135c9"
       ],
-      "verification": [],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "d327e0494647fbe03a4939a6d940fb7ccd7135c9",
+          "url": "https://github.com/interactive-project/code/actions/runs/37010598707",
+          "checks": [
+            "Immutable submissions and weighted public/private grading",
+            "Redaction, retry/idempotency, pending/error/deadline/cancellation/stale responses",
+            "Existing Code/editor/execution and real Docker conformance",
+            "Headless TypeScript consumers"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "d327e0494647fbe03a4939a6d940fb7ccd7135c9",
+          "url": "https://github.com/interactive-project/code/actions/runs/37010603750",
+          "checks": [
+            "Immutable submissions and weighted public/private grading",
+            "Redaction, retry/idempotency, pending/error/deadline/cancellation/stale responses",
+            "Existing Code/editor/execution and real Docker conformance",
+            "Headless TypeScript consumers"
+          ]
+        }
+      ],
       "actual_branch": "codex/issue-3",
       "pull_request": "https://github.com/interactive-project/code/pull/7",
-      "compatibility": "decisions/code-evaluation-v1.md"
+      "compatibility": "decisions/code-evaluation-v1.md",
+      "issue_state": "closed",
+      "merge_commit": "e6e478032b1c3d029d3698b125a2d4cceec73cb6"
     },
     {
       "order": 23,
