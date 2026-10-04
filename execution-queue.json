@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/improvement-proposals/issues/2",
+    "resume_from": "https://github.com/interactive-project/improvement-proposals/issues/3",
     "pause_after": null,
     "pause_reason": null
   },
@@ -1852,10 +1852,48 @@
         "Document npm naming verification and versioning strategy before any publication; no package publishing is part of this backlog-creation task."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "01efd08415dff7896bfe9c8b8f91e12173da4374"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "01efd08415dff7896bfe9c8b8f91e12173da4374",
+          "url": "https://github.com/interactive-project/improvement-proposals/actions/runs/37181425943",
+          "checks": [
+            "Node 22 governance-artifact workflow",
+            "20 commit-pinned compatibility rows and plugin dependency dimensions",
+            "6 release-gate stages and 10 valid/invalid/boundary readiness fixtures"
+          ]
+        },
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "4abcb6ce0bc75aee34ccad4288defcb0492f14ca",
+          "url": "https://github.com/interactive-project/improvement-proposals/actions/runs/37181441243",
+          "checks": [
+            "Post-merge Governance artifacts workflow passed on main"
+          ]
+        },
+        {
+          "kind": "local",
+          "status": "success",
+          "checks": [
+            "node scripts/check-release-governance.mjs",
+            "node --check scripts/check-release-governance.mjs",
+            "Parse compatibility-matrix.v1.json, release-gate.v1.json and fixtures/release-readiness.v1.json",
+            "git diff --cached --check"
+          ]
+        }
+      ],
+      "actual_branch": "codex/improvement-proposals-issue2",
+      "pull_request": "https://github.com/interactive-project/improvement-proposals/pull/15",
+      "merge_commit": "4abcb6ce0bc75aee34ccad4288defcb0492f14ca",
+      "issue_state": "closed",
+      "compatibility": "Documentation/governance-only. Records exact observed package versions and peer requirements; Protocol/Core/domain/plugin contract versions are separate. React/Vue/Svelte adapters and optional driver manifests/ranges remain absent and blocked from support/publication claims. No runtime, wire-schema or persisted-data migration. npm scope/package names were documented for future verification but not checked; no package was published."
     },
     {
       "order": 38,
