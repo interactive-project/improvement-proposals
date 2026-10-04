@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "gate_id": "interactive-project-cross-repository-release-v1",
+  "run_on": "exact-proposal-and-consumer-commits",
+  "block_release_when_any_required_evidence_is_missing_or_failed": true,
+  "required_stages": [
+    {"id":"ownership-and-proposal","required_artifacts":["completed-contract-change-proposal","contract-owner-approval","affected-consumer-review"]},
+    {"id":"compatibility-ranges","required_artifacts":["updated-compatibility-matrix","protocol-core-plugin-adapter-driver-ranges","oldest-supported-test","newest-supported-test","out-of-range-rejection-test"]},
+    {"id":"shared-conformance","required_artifacts":["fixture-revision","exact-consumer-commit","ci-run-url","valid-invalid-boundary-results"]},
+    {"id":"packed-consumer","required_artifacts":["clean-packed-artifact-install","type-and-import-check","npm-pack-dry-run","security-review"]},
+    {"id":"migration-and-deprecation","required_artifacts":["source-target-versions","ordered-migration","data-preservation-review","deprecation-window-or-not-applicable-rationale"]},
+    {"id":"identity-and-publication","required_artifacts":["verified-npm-scope-and-name","package-ownership","access-mode","provenance-and-rollback-owner"]}
+  ],
+  "shared_fixture_families": [
+    {"owner":"protocol","cases":["schema-valid-invalid","cross-language-diagnostics","version-and-migration-boundaries"]},
+    {"owner":"events","cases":["event-envelope","ordering-delivery","cancellation-and-replay"]},
+    {"owner":"registry","cases":["manifest-valid-invalid","engine-renderer-version-lookup","capability-boundaries"]},
+    {"owner":"core","cases":["load-dispatch-evaluate","persistence-restore","effects-cancellation"]},
+    {"owner":"domain-engines","cases":["canonical-actions","results-and-events","schema-boundaries"]},
+    {"owner":"hosts-and-adapters","cases":["same-semantic-trace","unsupported-contract-rejection","keyboard-accessibility-and-host-boundaries"]},
+    {"owner":"drivers","cases":["domain-contract-conformance","backend-version-boundaries","resource-and-wasm-policy"]}
+  ],
+  "release_order": ["protocol", "content-node-events-registry", "core", "domain-engines", "hosts-and-adapters", "optional-drivers", "product-consumers"],
+  "publishing_is_out_of_scope_for_backlog_and_ci": true
+}

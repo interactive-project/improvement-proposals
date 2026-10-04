@@ -1,0 +1,16 @@
+{
+  "fixture_version": 1,
+  "range_example": ">=1.2.0 <2.0.0",
+  "cases": [
+    {"id":"complete-evidence","kind":"valid","candidate":"1.2.0","matrix_complete":true,"oldest_and_newest_pass":true,"outside_range_rejected":true,"shared_fixtures_pass":true,"migration_documented":true,"npm_name_verified":true,"expected":"release-ready"},
+    {"id":"missing-adapter-range","kind":"invalid","candidate":"1.5.0","matrix_complete":false,"missing_dimension":"adapter-framework-range","expected":"blocked"},
+    {"id":"plugin-without-core-range","kind":"invalid","candidate":"1.5.0","matrix_complete":false,"missing_dimension":"plugin-core-range","expected":"blocked"},
+    {"id":"shared-fixture-failure","kind":"invalid","candidate":"1.5.0","matrix_complete":true,"shared_fixtures_pass":false,"expected":"blocked"},
+    {"id":"breaking-change-without-migration","kind":"invalid","candidate":"2.0.0","breaking_change":true,"migration_documented":false,"expected":"blocked"},
+    {"id":"npm-name-not-verified","kind":"invalid","candidate":"1.5.0","matrix_complete":true,"shared_fixtures_pass":true,"npm_name_verified":false,"expected":"blocked"},
+    {"id":"minimum-inclusive","kind":"boundary","candidate":"1.2.0","range_edge":"minimum-inclusive","expected":"supported"},
+    {"id":"maximum-below-exclusive","kind":"boundary","candidate":"1.99.99","range_edge":"highest-version-below-2.0.0","expected":"supported"},
+    {"id":"below-minimum","kind":"boundary","candidate":"1.1.99","range_edge":"below-minimum","expected":"rejected"},
+    {"id":"exclusive-major-boundary","kind":"boundary","candidate":"2.0.0","range_edge":"exclusive-upper-bound","expected":"rejected"}
+  ]
+}

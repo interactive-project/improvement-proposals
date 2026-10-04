@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-04",
+  "source": "Package manifests on the main branches of the listed public repositories; exact repository state is not an npm publication check.",
+  "source_commits": {
+    "protocol": "0280e004ba863621a257b96819f34295c8db0ea7",
+    "content-node": "5adc3721b5c7dfeffbace17b8b17d5c83d0b49b9",
+    "events": "7251000eee1ddefafb8f760aadd8e6ca7f96dfa3",
+    "registry": "e6ef81f960cc4cf2ec7a83a57b617d3ed65969a2",
+    "core": "502afd9bb2c9bea9303537c25f9a2e9d017b87f7",
+    "quiz": "6495ba927bc4de93400b46f172f00bb8d7076846",
+    "flashcards": "c637aa5c9c0db0cebf0f9d917ea941d3473d2ea8",
+    "code": "e6e478032b1c3d029d3698b125a2d4cceec73cb6",
+    "diagram": "bd28f5653b1801a76f266e2d44224c365cf9b182",
+    "whiteboard": "40b66e8d6582e74a20fdbc6da42e794ba7644bf0",
+    "simulation": "ed4b10057216855967e6f98fbd3fb495a4ef6a44",
+    "renderer-dom": "85372cae5aa72440af8a94e45fa0eceb93db1125"
+  },
+  "publication_status": "not_verified",
+  "policy": {
+    "package_versions_are_independent": true,
+    "pre_1_0_internal_peer_default": "exact-tested-version",
+    "wider_range_requires_lowest_and_highest_fixture_runs": true,
+    "plugin_versions_are_independent_from_contract_versions": true,
+    "missing_range_means": "blocked-from-compatibility-claim"
+  },
+  "required_dimensions": [
+    "protocol-package-and-contract",
+    "core-package-and-runtime-contract",
+    "registry-and-plugin-manifest-contract",
+    "domain-engine-and-activity-schema",
+    "host-adapter-and-framework-peer",
+    "external-driver-and-vendor-dependencies"
+  ],
+  "plugin_compatibility_requirements": {
+    "manifest_fields_recorded_by_registry_contract": ["pluginVersion", "protocolVersions", "activitySchemaVersions", "host", "rendererContractVersion"],
+    "additional_ranges_required_in_matrix": ["registry-package", "core-package", "domain-package", "host-adapter-framework", "external-driver-vendor"],
+    "core_range_encoded_in_current_plugin_manifest": false,
+    "release_allowed_without_additional_matrix_ranges": false
+  },
+  "plugin_instances": [
+    {"id":"interactive-project/dom-renderer-quiz","repository":"renderer-dom","plugin_version":"0.1.0","protocol_versions":["1.0.0"],"activity_schema_versions":["1.0.0"],"host":"dom","renderer_contract_version":"1.0.0","registry_package_range":"0.1.0","core_range":"not-directly-coupled; consumes EngineSession and Registry contracts","domain_package_range":"not-directly-coupled; declares Quiz ActivitySpec schema 1.0.0","framework_range":"not-applicable; vanilla DOM","external_driver_range":"host-provided ContentNode drivers; ContentNode peer range 0.1.0","npm_publication":"not-verified"},
+    {"id":"interactive-project/dom-renderer-flashcards","repository":"renderer-dom","plugin_version":"0.1.0","protocol_versions":["1.0.0"],"activity_schema_versions":["1.0.0"],"host":"dom","renderer_contract_version":"1.0.0","registry_package_range":"0.1.0","core_range":"not-directly-coupled; consumes EngineSession and Registry contracts","domain_package_range":"not-directly-coupled; declares Flashcards ActivitySpec schema 1.0.0","framework_range":"not-applicable; vanilla DOM","external_driver_range":"host-provided ContentNode drivers; ContentNode peer range 0.1.0","npm_publication":"not-verified"}
+  ],
+  "components": [
+    {"repository":"protocol","package_name":"@interactive-project/protocol","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"content-node","package_name":"@interactive-project/content-node","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["ContentNode 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"events","package_name":"@interactive-project/events","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Events 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"registry","package_name":"@interactive-project/registry","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Plugin manifest 1.0.0","Renderer contract 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"core","package_name":"@interactive-project/core","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/events":"0.1.0","@interactive-project/registry":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Core runtime v1 decision","Protocol 1.0.0","Events 1.0.0","Registry 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"quiz","package_name":"@interactive-project/quiz","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/content-node":"0.1.0","@interactive-project/events":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Quiz activity schema 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"flashcards","package_name":"@interactive-project/flashcards","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/content-node":"0.1.0","@interactive-project/events":"0.1.0","@interactive-project/core":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Flashcards activity schema 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"code","package_name":"@interactive-project/code","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/content-node":"0.1.0","@interactive-project/events":"0.1.0","@interactive-project/core":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Code activity schema 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"diagram","package_name":"@interactive-project/diagram","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/content-node":"0.1.0","@interactive-project/events":"0.1.0","@interactive-project/core":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Diagram activity schema 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"whiteboard","package_name":"@interactive-project/whiteboard","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/content-node":"0.1.0","@interactive-project/events":"0.1.0","@interactive-project/core":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Whiteboard activity schema 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"simulation","package_name":"@interactive-project/simulation","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/content-node":"0.1.0","@interactive-project/events":"0.1.0","@interactive-project/core":"0.1.0","ajv":"^8.17.1","ajv-formats":"^3.0.1"},"contract_versions":["Simulation activity schema 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"renderer-dom","package_name":"@interactive-project/renderer-dom","package_version":"0.1.0","status":"implemented-in-repository","peer_requirements":{"@interactive-project/protocol":"0.1.0","@interactive-project/content-node":"0.1.0","@interactive-project/registry":"0.1.0"},"contract_versions":["DOM renderer contract 1.0.0","Protocol 1.0.0"],"npm_publication":"not-verified"},
+    {"repository":"react","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"required_before_release":["protocol-range","core-range","registry/domain-ranges","react-peer-range","shared-fixture-evidence"]},
+    {"repository":"vue","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"required_before_release":["protocol-range","core-range","registry/domain-ranges","vue-peer-range","shared-fixture-evidence"]},
+    {"repository":"svelte","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"required_before_release":["protocol-range","core-range","registry/domain-ranges","svelte-peer-range","shared-fixture-evidence"]},
+    {"repository":"layout-elk","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"external_driver_range":"must-be-selected-and-tested-before-release","required_before_release":["diagram-contract-range","core-range","elk-vendor-range","shared-fixture-evidence"]},
+    {"repository":"graph-cytoscape","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"external_driver_range":"must-be-selected-and-tested-before-release","required_before_release":["diagram-contract-range","core-range","cytoscape-vendor-range","shared-fixture-evidence"]},
+    {"repository":"simulation-matter","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"external_driver_range":"must-be-selected-and-tested-before-release","required_before_release":["simulation-contract-range","core-range","matter-vendor-range","shared-fixture-evidence"]},
+    {"repository":"simulation-rapier","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"external_driver_range":"must-be-selected-and-tested-before-release","required_before_release":["simulation-contract-range","core-range","rapier-vendor-and-wasm-range","shared-fixture-evidence"]},
+    {"repository":"simulation-custom","package_name":null,"package_version":null,"status":"planned-no-package-manifest","peer_requirements":null,"external_driver_range":"must-be-declared-if-an-external-runtime-is-added","required_before_release":["simulation-contract-range","core-range","shared-fixture-evidence"]}
+  ]
+}
