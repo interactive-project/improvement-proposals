@@ -2,6 +2,8 @@
 
 Snapshot: 2026-10-02. All 26 accessible organization repositories were checked individually. There are 72 open issues in 23 repositories. interactive-academy, interactive-labs and interactive-bitcoin have no open issues in this snapshot.
 
+Repository ownership, interface ownership, allowed dependency directions and cross-repository approval rules are defined in [repository-architecture.md](repository-architecture.md).
+
 [protocol#1](https://github.com/interactive-project/protocol/issues/1) is closed as completed, with all five acceptance criteria checked. It is the completed foundation and is excluded from the work queue. protocol#2 is still open; its existing schema and validation code must be reviewed before changing it. The current protocol commit has a successful [Protocol conformance run](https://github.com/interactive-project/protocol/actions/runs/36780234791).
 
 ## Ordering
