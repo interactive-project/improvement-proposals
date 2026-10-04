@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/renderer-dom/issues/1",
+    "resume_from": "https://github.com/interactive-project/renderer-dom/issues/2",
     "pause_after": null,
     "pause_reason": null
   },
@@ -1745,10 +1745,39 @@
         "Keep engines usable without document/window and test mounting multiple isolated activity instances."
       ],
       "planned_branch": "codex/issue-1",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "f240137dc620ab4532ca2fd52504aef758d8e8c1"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "f240137dc620ab4532ca2fd52504aef758d8e8c1",
+          "url": "https://github.com/interactive-project/renderer-dom/actions/runs/37179797630",
+          "checks": [
+            "Node 22 clean npm ci --ignore-scripts, npm test and npm pack --dry-run passed",
+            "Real Quiz and Flashcards engines completed the golden semantic action traces",
+            "Accessible loading/error states, ContentNode text and fallback, independent Registry lookups, isolated mounts, child cleanup, listener cleanup and pending-asset cancellation passed"
+          ]
+        },
+        {
+          "kind": "local",
+          "status": "success",
+          "checks": [
+            "npm ci --ignore-scripts",
+            "npm test (Node 24.19.0, including strict TypeScript consumer compilation)",
+            "git diff --cached --check",
+            "npm pack --dry-run"
+          ]
+        }
+      ],
+      "actual_branch": "codex/renderer-dom-issue1",
+      "pull_request": "https://github.com/interactive-project/renderer-dom/pull/4",
+      "issue_state": "closed",
+      "merge_commit": "cb9aa81f061e30ece153a8d5a0d8652748ae64f6",
+      "compatibility": "Additive @interactive-project/renderer-dom host; Protocol 1.0.0, Registry renderer contract 1.0.0 and ContentNode v1 are consumed without changing wire schemas, activity data, snapshots or events. The first renderer supports Quiz single/multiple choice and true/false plus basic Flashcards reveal/rate/acknowledge/next. Other quiz kinds, framework adapters, full visual/browser/assistive-technology certification and package publication are not claimed. Media uses host-allowlisted ContentNode drivers; text fallbacks remain safe. See renderer-dom/docs/dom-host-v1.md and decisions/renderer-dom-host-v1.md."
     },
     {
       "order": 36,
