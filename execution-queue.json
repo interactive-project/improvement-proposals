@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/quiz/issues/4",
+    "resume_from": "https://github.com/interactive-project/renderer-dom/issues/1",
     "pause_after": null,
     "pause_reason": null
   },
@@ -1690,10 +1690,40 @@
         "Require accessible labels, response alternatives and localization fixtures in the renderer contract; defer formula, essay, oral and hotspot questions as versioned extensions."
       ],
       "planned_branch": "codex/issue-4",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "69f14c034969fdcb355fbdd99cb74f8df81d7edc"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "69f14c034969fdcb355fbdd99cb74f8df81d7edc",
+          "url": "https://github.com/interactive-project/quiz/actions/runs/37178509943",
+          "checks": [
+            "Node 22 clean npm ci --ignore-scripts and full npm test passed",
+            "Eight response-kind snapshot round trips and atomic version/identity/digest/driver rejection passed",
+            "Generated Quiz crossed Protocol → Registry → Core; structural, semantic, execution-permission and aiGeneratable gates rejected before engine construction",
+            "Localized accessibility fixture and shared headless/DOM/React/Vue/Svelte host trace contract passed"
+          ]
+        },
+        {
+          "kind": "local",
+          "status": "success",
+          "checks": [
+            "npm ci --ignore-scripts",
+            "npm test",
+            "git diff --check",
+            "npm pack --dry-run --json"
+          ]
+        }
+      ],
+      "actual_branch": "codex/quiz-issue-4-interop-generation",
+      "pull_request": "https://github.com/interactive-project/quiz/pull/8",
+      "issue_state": "closed",
+      "merge_commit": "6495ba927bc4de93400b46f172f00bb8d7076846",
+      "compatibility": "Quiz schema/activity v1.0.0 and Protocol/Events wire contracts unchanged. Evaluable is backed by an injected trusted evaluator; local practice stays offline, while remote hosts must declare/enforce network permission. All eight response kinds round-trip snapshots; unsupported versions reject because no cross-version migration exists. Golden trace is executable headlessly; DOM/React/Vue/Svelte are planned adapter gates, not implemented UI claims. Quiz's external Content Node schema ref is handled by its trusted validator, never remote fetch. No npm release claim. See docs/interop-v1.md and decisions/quiz-interop-v1.md."
     },
     {
       "order": 35,
