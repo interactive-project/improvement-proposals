@@ -33,7 +33,7 @@ This document assigns ownership for the repositories in the `interactive-project
 | `interactive-labs` (private) | EduPlatform product application and consumer of shared libraries; it does not own public protocol or engine contracts. |
 | `interactive-bitcoin` (private) | Currently empty repository with no library/runtime ownership. If populated as an application, it consumes shared libraries rather than defining their contracts. |
 
-The `renderer-dom`, `react`, `vue`, `svelte`, collaboration, scheduling and optional-driver repositories are assigned homes before implementation so later work extends these boundaries rather than creating duplicate runtime or `adapter-*` repositories. As of this check, those repositories are empty; their issue backlogs define the planned contracts. No `runtime`, `adapter-react`, `adapter-vue` or `adapter-svelte` repository exists.
+The `renderer-dom`, `react`, `vue`, `svelte`, collaboration, scheduling and optional-driver repositories have assigned homes so later work extends these boundaries rather than creating duplicate runtime or `adapter-*` repositories. `renderer-dom` now contains its initial host, built-in renderers and reference accessibility/interaction contract. React, Vue and Svelte adapters, collaboration, scheduling and optional-driver packages remain planned and have no checked-in package manifests in this snapshot. No `runtime`, `adapter-react`, `adapter-vue` or `adapter-svelte` repository exists.
 
 ## Interface ownership
 
@@ -73,10 +73,10 @@ The active manifests checked on 2026-10-04 follow this shape: `content-node`, `e
 ## Cross-repository and breaking-change process
 
 1. Propose a cross-boundary change in `improvement-proposals` before implementing it in a consumer repository. Name the contract owner and every directly affected consumer repository.
-2. Include the motivation, exact public surfaces, alternatives, compatibility impact, migration steps, security/privacy/accessibility implications, conformance fixtures and rollout order. Do not publish or imply an npm package name is available as part of the proposal.
+2. Use [`templates/contract-change-proposal.md`](templates/contract-change-proposal.md) to include motivation, exact public surfaces, alternatives, compatibility impact, migration steps, security/privacy/accessibility implications, conformance fixtures and rollout order. Do not publish or imply an npm package name is available as part of the proposal.
 3. The contract-owning repository approves changes to its interface. A breaking change also requires review/approval from maintainers of every directly affected consumer repository. Record the decision and approvals in a versioned decision document linked to the proposal.
 4. Land the contract and fixtures in the owning repository, then update consumers in dependency order. Breaking changes require an explicit source/target version and loss-aware migration or a documented rejection path; silent contract drift is not allowed.
-5. Before any npm release, verify control and availability of the chosen npm organization/scope and package names, then publish the compatibility matrix and versioning/migration policy. Current `@interactive-project/*` manifest names are not proof that the npm scope is owned or available.
+5. Before any npm release, follow [`release-governance.md`](release-governance.md), verify control and availability of the chosen npm organization/scope and package names, and update [`compatibility-matrix.v1.json`](compatibility-matrix.v1.json). Current `@interactive-project/*` manifest names are not proof that the npm scope is owned or available.
 
 ## Evidence and limits
 
