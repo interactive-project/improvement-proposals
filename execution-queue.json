@@ -23,10 +23,10 @@
       "commit_sha": "5ca2c665f496758d1a5301fd35f7ea87a32abc39"
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
-    "paused": true,
-    "resume_from": "https://github.com/interactive-project/simulation/issues/2",
-    "pause_after": "https://github.com/interactive-project/simulation/issues/1",
-    "pause_reason": "Paused at user request after simulation#1 PR merge, exact final-head CI and verified issue closure."
+    "paused": false,
+    "resume_from": "https://github.com/interactive-project/improvement-proposals/issues/1",
+    "pause_after": null,
+    "pause_reason": null
   },
   "issues": [
     {
@@ -1338,10 +1338,31 @@
         "Test equivalent action traces, large time gaps, repeated resets and tolerance-based comparisons for nondeterministic drivers."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "a0c10b907e2294a6f016fd4f4d5337df798d3fe8"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "a0c10b907e2294a6f016fd4f4d5337df798d3fe8",
+          "url": "https://github.com/interactive-project/simulation/actions/runs/37174347172",
+          "checks": [
+            "Fixed-step clock, bounded accumulation and catch-up/drop behavior",
+            "Seeded random streams, deterministic equivalent traces and repeated resets",
+            "Pause/resume, including pause during asynchronous catch-up",
+            "Per-step timeout, cancellation-safe lifecycle and recoverable invalid state",
+            "Tolerance comparison for a nondeterministic driver and headless TypeScript consumer"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-2",
+      "pull_request": "https://github.com/interactive-project/simulation/pull/6",
+      "compatibility": "Additive Simulation runtime and trusted driver-context APIs. No ActivitySpec, DriverManifest, Protocol, Core or snapshot wire schema changed. See decisions/simulation-clock-v1.md.",
+      "issue_state": "closed",
+      "merge_commit": "ed4b10057216855967e6f98fbd3fb495a4ef6a44"
     },
     {
       "order": 28,
