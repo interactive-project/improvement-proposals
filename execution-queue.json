@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/content-node/issues/2",
+    "resume_from": "https://github.com/interactive-project/content-node/issues/3",
     "pause_after": null,
     "pause_reason": null
   },
@@ -1428,10 +1428,33 @@
         "Test equivalent semantics in DOM, React, Vue and Svelte fixtures without assuming identical markup."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "17d7f8cbc8319310799c90edd2088cdaa13940ea"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "17d7f8cbc8319310799c90edd2088cdaa13940ea",
+          "url": "https://github.com/interactive-project/content-node/actions/runs/37175405453",
+          "checks": [
+            "Driver registration, capability matching, priority, lifecycle and accessible fallback tests",
+            "Raw-HTML escape policy, URI scheme/origin allowlists and host-only asset resolution",
+            "Exact math/code source and nonvisual alternative enforcement",
+            "Localized media-unavailable, unsupported-language and renderer-error recovery",
+            "Equivalent success/fallback semantics for DOM, React, Vue and Svelte profiles",
+            "18 existing content fixtures in JavaScript and independent Python validation",
+            "NodeNext public consumer types and npm package contents"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-2",
+      "pull_request": "https://github.com/interactive-project/content-node/pull/5",
+      "compatibility": "Additive optional rendering subpath; no ContentNode, Protocol, ActivitySpec or stored-data schema changed. No migration required. Framework entries are semantic conformance profiles, not production adapters; those remain host-owned. See decisions/content-rendering-v1.md.",
+      "issue_state": "closed",
+      "merge_commit": "b7af4fc3cd286babe4a1b47c2989b428dbeccaf7"
     },
     {
       "order": 30,
