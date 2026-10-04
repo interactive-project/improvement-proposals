@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/content-node/issues/3",
+    "resume_from": "https://github.com/interactive-project/events/issues/3",
     "pause_after": null,
     "pause_reason": null
   },
@@ -1476,10 +1476,33 @@
         "Document renderer extension compatibility and unsupported optional content fallback."
       ],
       "planned_branch": "codex/issue-3",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "31f55b0640eab3399ddc803d5a2eedb35f1f78ef"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "31f55b0640eab3399ddc803d5a2eedb35f1f78ef",
+          "url": "https://github.com/interactive-project/content-node/actions/runs/37175802421",
+          "checks": [
+            "19 ContentNode fixtures shared between JavaScript Ajv and independent Python Draft 2020-12",
+            "Canonical JSON serialization/parse/normalize equality across valid fixtures and a maximum-depth group",
+            "One identical canonical ContentNode embedded in quiz, flashcard, diagram and whiteboard ActivitySpec fixture slots",
+            "Arabic RTL locale-region fallback and missing-locale default fallback",
+            "Temporary blob object URL rejected by semantic AssetRef validation",
+            "Existing nested composition, byte/string limits, schema/type and renderer conformance suites",
+            "npm pack dry run contains the added portability fixtures"
+          ]
+        }
+      ],
+      "actual_branch": "codex/issue-3",
+      "pull_request": "https://github.com/interactive-project/content-node/pull/6",
+      "compatibility": "Documentation and conformance only; no ContentNode, Protocol, ActivitySpec or domain schema changed. No ContentNode 1.0.0 data migration is needed. Future changed variants require explicit validated migration; domain configs remain illustrative shared-envelope fixtures. See decisions/content-portability-v1.md.",
+      "issue_state": "closed",
+      "merge_commit": "5adc3721b5c7dfeffbace17b8b17d5c83d0b49b9"
     },
     {
       "order": 31,
