@@ -11,47 +11,46 @@ evidencia antes de omitirla.
 Consulta los criterios y el progreso en:
 https://github.com/interactive-project/improvement-proposals/blob/main/execution-queue.json
 
-La última issue completada es registry#3.
+La última issue completada es core#5.
 Todas las referencias siguientes pertenecen a interactive-project.
 
 Orden pendiente:
-1. core#5
-2. quiz#4
-3. renderer-dom#1
-4. renderer-dom#2
-5. improvement-proposals#2
-6. improvement-proposals#3
-7. flashcards#3
-8. code#4
-9. diagram#2
-10. diagram#3
-11. whiteboard#3
-12. whiteboard#4
-13. simulation#3
-14. simulation#4
-15. renderer-dom#3
-16. react#1
-17. react#2
-18. react#3
-19. vue#1
-20. vue#2
-21. vue#3
-22. svelte#1
-23. svelte#2
-24. svelte#3
-25. collaboration#1
-26. collaboration#2
-27. collaboration#3
-28. spaced-repetition#1
-29. spaced-repetition#2
-30. spaced-repetition#3
-31. layout-elk#1
-32. layout-elk#2
-33. graph-cytoscape#1
-34. graph-cytoscape#2
-35. simulation-matter#1
-36. simulation-matter#2
-37. simulation-rapier#1
-38. simulation-rapier#2
-39. simulation-custom#1
-40. simulation-custom#2
+1. quiz#4
+2. renderer-dom#1
+3. renderer-dom#2
+4. improvement-proposals#2
+5. improvement-proposals#3
+6. flashcards#3
+7. code#4
+8. diagram#2
+9. diagram#3
+10. whiteboard#3
+11. whiteboard#4
+12. simulation#3
+13. simulation#4
+14. renderer-dom#3
+15. react#1
+16. react#2
+17. react#3
+18. vue#1
+19. vue#2
+20. vue#3
+21. svelte#1
+22. svelte#2
+23. svelte#3
+24. collaboration#1
+25. collaboration#2
+26. collaboration#3
+27. spaced-repetition#1
+28. spaced-repetition#2
+29. spaced-repetition#3
+30. layout-elk#1
+31. layout-elk#2
+32. graph-cytoscape#1
+33. graph-cytoscape#2
+34. simulation-matter#1
+35. simulation-matter#2
+36. simulation-rapier#1
+37. simulation-rapier#2
+38. simulation-custom#1
+39. simulation-custom#2
