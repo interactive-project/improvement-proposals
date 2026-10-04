@@ -11,7 +11,7 @@ evidencia antes de omitirla.
 Consulta los criterios y el progreso en:
 https://github.com/interactive-project/improvement-proposals/blob/main/execution-queue.json
 
-La última issue completada es renderer-dom#1.
+La última issue completada es renderer-dom#2.
 Todas las referencias siguientes pertenecen a interactive-project.
 
 Orden pendiente:

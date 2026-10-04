@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "organization": "interactive-project",
-  "captured_on": "2026-10-02",
+  "captured_on": "2026-10-04",
   "repository_count": 26,
   "open_issue_count": 72,
   "completed_foundations": [
@@ -24,7 +24,7 @@
     },
     "mode": "Strictly sequential: implement one issue, verify exact commit, merge its PR into main, close the issue, then start the next.",
     "paused": false,
-    "resume_from": "https://github.com/interactive-project/renderer-dom/issues/2",
+    "resume_from": "https://github.com/interactive-project/improvement-proposals/issues/2",
     "pause_after": null,
     "pause_reason": null
   },
@@ -1798,10 +1798,39 @@
         "Plan automated semantic checks plus manual keyboard and assistive-technology acceptance scenarios."
       ],
       "planned_branch": "codex/issue-2",
-      "execution_status": "queued",
+      "execution_status": "completed",
       "session_id": null,
-      "commits": [],
-      "verification": []
+      "commits": [
+        "c5b294e97267952b4c282a85f0760f808e5d9ae4"
+      ],
+      "verification": [
+        {
+          "kind": "github-actions",
+          "status": "success",
+          "commit": "c5b294e97267952b4c282a85f0760f808e5d9ae4",
+          "url": "https://github.com/interactive-project/renderer-dom/actions/runs/37180866999",
+          "checks": [
+            "Node 22 clean npm ci --ignore-scripts, npm test and npm pack --dry-run passed",
+            "Quiz and Flashcards semantic controls, live announcements, focus restoration and keyboard navigation",
+            "Spanish/Arabic labels, RTL navigation, style-neutral hooks/tokens and reduced-motion contract",
+            "Nonvisual mode uses ContentNode text alternatives; registered simulation adapter dispatches a semantic action with host identity and cancellation"
+          ]
+        },
+        {
+          "kind": "local",
+          "status": "success",
+          "checks": [
+            "npm ci --ignore-scripts and npm test with strict TypeScript consumer compilation (Node 24.19.0)",
+            "npm pack --dry-run includes messages.js and accessibility guidance",
+            "git diff --check"
+          ]
+        }
+      ],
+      "actual_branch": "codex/renderer-dom-issue2",
+      "pull_request": "https://github.com/interactive-project/renderer-dom/pull/5",
+      "merge_commit": "85372cae5aa72440af8a94e45fa0eceb93db1125",
+      "issue_state": "closed",
+      "compatibility": "Additive renderer-dom DOM options and renderer-service helpers. No Protocol, ActivitySpec, snapshot, event or action wire-schema changes and no data migration. Quiz single/multiple choice and true/false plus basic Flashcards gain localized semantic UI and keyboard/focus behavior. Nonvisual mode skips visual ContentNode drivers in favor of plain-text alternatives; advanced activities still require a registered domain-aware renderer. Headless checks are not browser/assistive-technology certification; manual acceptance scenarios are documented but were not run. No npm release."
     },
     {
       "order": 37,
